@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Gunplay RG';
+    src: url('../assets/font/gunplay rg.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: #FF4654;
+    --second-color: #111723;
+}
+
+html, body {
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fundo.png");
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    all: unset;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.column-1 img {
+    height: 80vh;
+}
+.column-3 img {
+    height: 80vh;
+}
+
+.column-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7vh;
+}
+
+.titulo img{
+    cursor: pointer;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#button_ocultar{
+    cursor: pointer;
+}
+
+.column-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9e58587d;
+    width: 480px;
+    border-radius: 32px;
+    padding: 36px 32px;
+}
+
+.column-2 span{
+    font-family: Gunplay RG;
+    font-weight: bolder 100px;
+    font-size: 28px;
+}
+
+.column-2 .form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container img{
+    position: absolute; 
+    width: 1.2vw; 
+    height: 1.2vw; 
+    margin-top: 3.8vh;  
+    margin-left: 0.7vw;
+}
+
+#button_ocultar{
+    position: absolute;
+    margin-left: 45vh;
+}
+
+.input {
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 12px 12px 12px 40px;
+    margin: 16px 0;
+    border: none;
+    border-bottom: 6px solid var(--first-color);
+    border-radius: 12px;
+    background-color: transparent;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.input:focus {
+    outline: none;
+    background-color: rgba(219, 119, 119, 0.44);
+}
+
+.input::-webkit-input-placeholder {
+    color: #d9d9d9;
+}
+
+.esqueceu {
+    font-family: Gunplay RG;
+    align-self: flex-end;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.esqueceu:hover {
+    color: var(--first-color);
+}
+
+#btn-entrar {
+    font-family: Gunplay RG;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: var(--first-color);
+    margin: 28px 0;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#btn-entrar:hover {
+    background-color: #922626;
+}
+
+.nova-conta {
+    margin: 4px 0 8px 0;
+    text-align: center;
+    font-family: Gunplay RG;
+}
+
+.nova-conta a {
+    color: var(--first-color);
+    transition: 0.2s;
+    font-family: Gunplay RG;
+}
+
+.nova-conta a:hover {
+    color: #ff7e7e;
+}
+
+    

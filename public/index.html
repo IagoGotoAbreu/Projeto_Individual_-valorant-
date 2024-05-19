@@ -1,0 +1,443 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AquaTech | Página Inicial</title>
+
+    <script src="./js/sessao.js"></script>
+
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="icon" href="./assets/icon/favicon2.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body>
+    <div class="header">
+      <div class="container">
+        <h1 class="titulo">AquaTech</h1>
+        <ul class="navbar">
+          <li class="agora">
+            <a href="#">Inicial</a>
+          </li>
+          <li>
+            <a href="simulador.html">Simulador</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="login.html">Login</a>
+          </li>
+          <li>
+            <a href="cadastro.html">Cadastro</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="banner">
+      <div class="container">
+        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
+      </div>
+    </div>
+  
+    <div class="social">
+      <div class="container">
+        <div class="boxes">
+          <div class="box">
+            <img src="assets/imgs/planet-earth_color.png">
+            <h4>Missão</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
+              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
+              minima.</p>
+          </div>
+          <div class="box">
+            <img src="assets/imgs/lightbulb_color.png">
+            <h4>Visão</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
+              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
+              minima.</p>
+          </div>
+          <div class="box">
+            <img src="assets/imgs/growth_color.png">
+            <h4>Valores</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
+              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
+              minima.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer">
+      <div class="container">
+        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
+        <span class="version">v1.0.0</span>
+      </div>
+    </div>
+  </body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant | Home</title>
+    <link rel="icon" type="image/png" href="../public/assets/img/icon_logo.avif" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../public/css/index.css">
+</head>
+
+<body>
+    <header id="home">
+        <nav class="nav" data-aos="fade-down" data-aos-duration="1500">
+            <img src="../public/assets/img/logo.png" alt="Valorant Logo" onclick="home()">
+
+            <div class="nav-lista">
+                <ul>
+                    <li><a href="#sobre">SOBRE</a></li>
+                    <li><a href="#cenario">CENÁRIO COMPETITIVO</a></li>
+                    <li><a href="#quiz">QUIZ</a></li>
+                    <li><a href="#desenvolvedor">DESENVOLVEDOR </a></li>
+                </ul>
+
+                <a href="login.html" class="btn-entrar">ENTRAR</a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="column-1"></div>
+            <div class="column-2" data-aos="fade-up" data-aos-duration="1800">
+                <div>
+                    <h1>SEJA BEM-VINDO!</h1>
+                    <p>Você já ouviu falar sobre um jogo de fadinha com tiros?<br>Independente da sua resposta, saiba
+                        que agora você está no lugar certo. Aqui irei te mostrar um pouquinho sobre esse jogo magnífico
+                        que vem crescendo significantemente nesses últimos tempos!
+                    </p>
+                    <a href="#sobre">SAIBA MAIS</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <div class="column-1" data-aos="fade-right" data-aos-duration="2000">
+                <div>
+                    <h1>O QUE É VALORANT?</h1>
+                    <p>
+                        Valorant é um jogo de tiro tático em primeira pessoa desenvolvido pela Riot Games, lançado em
+                        2020. Ele combina elementos de estratégia e habilidade com um elenco de agentes únicos, cada um
+                        com habilidades especiais. No jogo, duas equipes de cinco jogadores competem para alcançar
+                        objetivos específicos, como plantar ou desarmar uma bomba, em mapas detalhados e variados. A
+                        jogabilidade exige coordenação em equipe, precisão e uso inteligente das habilidades dos
+                        agentes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column-2" data-aos="fade-left" data-aos-duration="2000">
+                <img src="../public/assets/img/oquee.png">
+            </div>
+        </section>
+
+        <!--                                        AGENTES                                                 -->
+
+        <section id="agentes">
+            <div class="subTitulo" data-aos="fade-down" data-aos-duration="1300">
+                <div class="column-1">
+                    <h1>Agentes</h1>
+                </div>
+                <div class="column-2"></div>
+            </div>
+
+            <!-- 4 Agentes -->
+            <div class="inicio">
+                <div class="conteudo">
+                    <div class="line" data-aos="fade-up" data-aos-duration="1300">
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/astra.png" alt="Astra">
+                            <h2>Astra</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/controlador.png" alt="Controlador">Controlador</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/breach.png" alt="Breach">
+                            <h2>Breach</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/iniciador.png" alt="Iniciador">Iniciador</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/brimstone.png" alt="Brimstone">
+                            <h2>Brimstone</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/controlador.png" alt="Controlador">Controlador</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/chamber.png" alt="Chamber">
+                            <h2>Chamber</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/sentinela.png" alt="Sentinela">Sentinela</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conteudo2" id="conteudo2" style="display: none;">
+                    <div class="line">
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/clove.png" alt="Clove">
+                            <h2>Clove</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/controlador.png" alt="Controlador">Controlador</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img class="chopper" src="../public/assets/img/cypher.png" alt="Cypher">
+                            <h2>Cypher</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/sentinela.png" alt="Sentinela">Sentinela</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/deadlock.png" alt="Deadlock">
+                            <h2>DeadLock</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/sentinela.png" alt="Sentinela">Sentinela</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/fade.png" alt="Fade">
+                            <h2>Fade</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/iniciador.png" alt="Iniciador">Iniciador</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 Agentes -->
+
+                    <div class="line">
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/gekko.png" alt="Gekko">
+                            <h2>Gekko</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/iniciador.png" alt="Iniciador">Iniciador</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/harbor.png" alt="Harbor">
+                            <h2>Harbor</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/controlador.png" alt="Controlador">Controlador</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/iso.png" alt="Iso">
+                            <h2>Iso</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/duelista.png" alt="Duelista">Duelista</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/jett.png" alt="Jett">
+                            <h2>Jett</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/duelista.png" alt="Duelista">Duelista</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 Agentes -->
+
+                    <div class="line">
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/keyo.png" alt="Keyo">
+                            <h2>Keyo</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/iniciador.png" alt="Iniciador">Iniciador</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/killjoy.png" alt="Killjoy">
+                            <h2>KillJoy</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/sentinela.png" alt="Sentinela">Sentinela</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/neon.png" alt="Neon">
+                            <h2>Neon</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/duelista.png" alt="Duelista">Duelista</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/omen.png" alt="Omen">
+                            <h2>Omen</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/controlador.png" alt="Controlador">Controlador</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 Agentes -->
+
+                    <div class="line">
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/phoenix.png" alt="Phoenix">
+                            <h2>Phoenix</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/duelista.png" alt="Duelista">Duelista</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/raze.png" alt="Raze">
+                            <h2>Raze</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/duelista.png" alt="Duelista">Duelista</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/reyna.png" alt="Reyna">
+                            <h2>Reyna</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/duelista.png" alt="Duelista">Duelista</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/sage.png" alt="Sage">
+                            <h2>Sage</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/sentinela.png" alt="Sentinela">Sentinela</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 Agentes -->
+
+                    <div class="line">
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/skye.png" alt="skye">
+                            <h2>Skye</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/iniciador.png" alt="Iniciador">Iniciador</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/sova.png" alt="Sova">
+                            <h2>Sova</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/iniciador.png" alt="Iniciador">Iniciador</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/viper.png" alt="Viper">
+                            <h2>Viper</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/controlador.png" alt="Controlador">Controlador</p>
+                            </div>
+                        </div>
+
+                        <div class="agentes-container">
+                            <img src="../public/assets/img/yoru.png" alt="Yoru">
+                            <h2>Yoru</h2>
+                            <div class="icone">
+                                <p><img src="../public/assets/img/duelista.png" alt="Duelista">Duelista</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="button_down" onclick="mostrarMais()" data-aos="fade-right" data-aos-duration="1800">
+                    <img id="button_mudar" src="../public/assets/img/seta_baixo.png" alt="seta-baixo">
+                    <span id="texto">Expandir</span>
+                    <img id="button_mudar" src="../public/assets/img/seta_baixo.png" alt="seta-baixo">
+                </div>
+            </div>
+
+        </section>
+
+        <!--                                          MAPAS                                                      -->
+
+        <section id="mapas">
+            <div class="subTitulo" data-aos="fade-down" data-aos-duration="1300">
+                <div class="column-1">
+                    <h1>Mapas</h1>
+                </div>
+                <div class="column-2"></div>
+            </div>
+
+            <div class="line" data-aos="fade-up" data-aos-duration="1800">
+                <div class="mapas-container">
+                    <button onclick="back()">
+                        <img src="../public/assets/img/seta_left.png" alt="left-1">
+                    </button>
+                    <div class="mapas-carousel">
+                        <img src="" alt="" id="img">
+                    </div>
+                    <button onclick="next()">
+                        <img src="../public/assets/img/seta_right.png" alt="right-2">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--                                    CENÁRIO COMPETITIVO                                              -->
+
+        <section id="cenario">
+            <h1>CENÁRIO COMPETITIVO</h1>
+
+            <div class="container">
+                <div class="column-1">
+                    <h2>Cenário Masculino</h2>
+                    <div class="img-container">
+                        <img src="../public/assets/img/masculino.png">
+                    </div>
+                    
+                </div>
+
+                <div class="column-2"></div>
+
+                <div class="column-3">
+                    <h2>Cenário Inclusivo</h2>
+                    <div class="img-container">
+                        <img src="../public/assets/img/inclusivo.png">
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+    </main>
+</body>
+
+</html>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="../public/js/index.js"></script>
