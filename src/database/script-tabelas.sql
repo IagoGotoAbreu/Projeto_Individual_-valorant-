@@ -63,11 +63,8 @@ use valorant;
 
 create table quiz (
 idQuiz int primary key auto_increment,
-resposta1 varchar(45),
-resposta2 varchar(45),
-resposta3 varchar(45),
-resposta4 varchar(45),
-resposta5 varchar(45));
+respostas_certas varchar(45),
+respostas_erradas varchar(45));
 
 create table usuario (
 idUsuario int primary key auto_increment,
@@ -76,3 +73,5 @@ email varchar(45),
 senha varchar(45),
 fkQuiz int,
 foreign key (fkQuiz) references quiz(idQuiz));
+
+select * from usuario;
