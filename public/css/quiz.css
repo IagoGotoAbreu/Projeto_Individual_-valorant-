@@ -68,15 +68,45 @@ body{
 
 .button{
     font-family: 'Gunplay RG', sans-serif;
-    background-color: var(--first-color) ;
+    background-color: var(--first-color);
     color: #ffffff;
     font-size: 16px;
     border: none;
     border-radius: 32px;
     height: 48px;
     padding: 0 32px;
+    transition: 0.3s;
 }
 
+.button:not(:disabled):hover{
+    background-color: #ff465691;
+}
+
+.answer:disabled{
+    cursor: not-allowed;
+}
+
+.hide{
+    display: none;
+}
+
+.correct{
+    background-color: green;
+}
+
+.incorrect{
+background-color: red;
+}
+
+.final-message{
+    font-size: 20px;
+    text-align: center;
+}
+
+.final-message span{
+    display: block;
+    margin-top: 8px;
+}
 
 
 
