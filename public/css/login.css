@@ -78,7 +78,7 @@ a{
 
 .column-2 span{
     font-family: Gunplay RG;
-    font-weight: bolder 100px;
+    /* font-weight: bolder 100px; */
     font-size: 28px;
 }
 
@@ -169,6 +169,13 @@ a{
 
 .nova-conta a:hover {
     color: #ff7e7e;
+}
+
+.erro{
+    font-family: 'Gunplay RG';
+    color: red;
+    text-align: center;
+    font-size: 17px;
 }
 
     

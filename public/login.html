@@ -187,7 +187,7 @@
                 <div class="form">
                     <div class="input-container">
                         <img src="./assets/img/email.png" alt="icon-email">
-                        <input type="text" id="emailInput" class="input" placeholder="E-mail">
+                        <input type="text" id="input_email" class="input" placeholder="E-mail">
                     </div>
                     <div class="input-container">
                         <img src="./assets/img/cadeado.png" alt="icon-cadeado">
@@ -195,9 +195,10 @@
                             <img id="img_ocultar" src="./assets/img/olho-aberto.png">
                         </div>
                         <input type="password" id="input_senha" class="input" placeholder="Senha">
+                        <div id="nExiste"></div>
                     </div>
                     <a class="esqueceu">Esqueceu sua senha?</a>
-                    <button id="btn-entrar">ENTRAR</button>
+                    <button id="btn-entrar" onclick="entrar()">ENTRAR</button>
                     <p class="nova-conta">Ainda não possui uma conta? 
                         <a href="cadastro.html">Registre-se</a></p>
                 </div>

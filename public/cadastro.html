@@ -214,16 +214,18 @@
             <div class="titulo" data-aos="fade-down" data-aos-duration="1800">
                 <img src="./assets/img/logo.png" alt="Valorant Logo" onclick="home()">
             </div>
-            <div class="column-2" data-aos="fade-up" data-aos-duration="1800">
+            <div id="column-2" data-aos="fade-up" data-aos-duration="1800">
                 <span>Faça seu Cadastro</span>
                 <div class="form">
                     <div class="input-container">
                         <img src="./assets/img/usuario.png" alt="icon-user">
                         <input type="text" id="input_nickname" class="input" placeholder="NickName">
+                        <div id="validacao_nickname"></div>
                     </div>
                     <div class="input-container">
                         <img src="./assets/img/email.png" alt="icon-email">
                         <input type="text" id="input_email" class="input" placeholder="E-mail">
+                        <div id="validacao_email"></div>
                     </div>
                     <div class="input-container">
                         <img src="./assets/img/cadeado.png" alt="icon-cadeado">
@@ -231,6 +233,7 @@
                             <img id="img_fechar" src="./assets/img/olho-aberto.png">
                         </div>
                         <input type="password" id="ipt_senha" class="input" placeholder="Senha">
+                        <div id="validacao_senha"></div>
                     </div>
                     <div class="input-container">
                         <img src="./assets/img/cadeado.png" alt="icon-cadeado">
@@ -238,11 +241,14 @@
                             <img id="img_ocultar" src="./assets/img/olho-aberto.png">
                         </div>
                         <input type="password" id="input_senha" class="input" placeholder="Confirmar Senha">
+                        <div id="validacao_confirmar_senha"></div>
                     </div>
 
-                    <button id="btn-cadastrar" onclick="cadastrar()">CADASTRAR</button>
+                    <button id="btn-cadastrar" onclick="validar()">CADASTRAR</button>
                     <p class="nova-conta">Já possui uma conta? 
                         <a href="login.html">Faça Login</a></p>
+
+
                 </div>
             </div>
         </div>

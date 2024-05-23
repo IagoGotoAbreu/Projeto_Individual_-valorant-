@@ -4,6 +4,9 @@ function home() {
     window.location.href = "index.html"
 }
 
+
+
+
 function fechar() {
     if (ipt_senha.type == "password") {
         ipt_senha.type = "text";
@@ -23,6 +26,39 @@ function ocultar() {
     }
 }
 
+function validar() {
+    var nickname = input_nickname.value;
+    var email = input_email.value;
+    var senha = ipt_senha.value;
+    var confirmacaoSenha = input_senha.value;
+    var validado = true
+
+    if (nickname.length < 3) {
+        input_nickname.style = "border: solid red"
+        validacao_nickname.innerHTML = "Seu nick tem que ter mais de 2 caracteres"
+        validado = false
+    }
+    if (email.indexOf("@") < 0 || email.indexOf(".") < 0 || email.length < 9) {
+        input_email.style = "border: solid red"
+        validacao_email.innerHTML = "Seu email tem que ter um @ e um ."
+        validado = false
+    }
+    if (senha.length < 6) {
+        ipt_senha.style = "border: solid red"
+        validacao_senha.innerHTML = "Sua senha tem que ter mais de 5 caracteres"
+        validado = false
+    }
+    if (confirmacaoSenha != senha) {
+        input_senha.style = "border: solid red"
+        validacao_confirmar_senha.innerHTML = "A confirmação tem que ser igual a senha"
+        validado = false
+    }
+    if (validado) {
+        cadastrar()
+        document.getElementById("column-2").innerHTML = '<span style="font-size: 22px; text-align: center">Cadastro Realizado com Sucesso!<br>Redirecionando para a Tela de Login...</span>';
+    }
+}
+
 function cadastrar() {
 
     //Recupere o valor da nova input pelo nome do id
@@ -30,45 +66,32 @@ function cadastrar() {
     var nicknameVar = input_nickname.value;
     var emailVar = input_email.value;
     var senhaVar = ipt_senha.value;
-    var confirmacaoSenhaVar = input_senha.value;
     // var empresaVar = listaEmpresas.value
-    if (
-        nicknameVar == "" ||
-        emailVar == "" ||
-        senhaVar == "" ||
-        confirmacaoSenhaVar == ""
-    ) {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML =
-            "(Mensagem de erro para todos os campos em branco)";
 
-        finalizarAguardar();
-        return false;
-    } else {
-        //   setInterval(sumirMensagem, 5000);
-        // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                nicknameServer: nicknameVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar,
-                // empresaServer: empresaVar
-            }),
+    //   setInterval(sumirMensagem, 5000);
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            nicknameServer: nicknameVar,
+            emailServer: emailVar,
+            senhaServer: senhaVar,
+            // empresaServer: empresaVar
+        }),
+    })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+            setTimeout(() => {
+                window.location = "./login.html";
+            }, "2000");
         })
-            .then(function (resposta) {
-                console.log("resposta: ", resposta);
-                setTimeout(() => {
-                    window.location = "./login.html";
-                }, "1000");
-            })
-            .catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
         });
-    }
+
 }
