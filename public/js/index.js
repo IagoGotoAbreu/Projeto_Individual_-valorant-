@@ -10,9 +10,9 @@ window.addEventListener("scroll", () => nav.classList.toggle("active", scrollY >
 
 var img = document.getElementById("img");
 
-img.src = './assets/img/ascent.png';
+img.src = './assets/maps/ascent.png';
 
-var lista_imagens_mapas = ['./assets/img/ascent.png', './assets/img/bind.png', './assets/img/brezze.png', './assets/img/fracture.png', './assets/img/haven.png', './assets/img/icebox.png', './assets/img/lotus.png', './assets/img/pearl.png', './assets/img/split.png', './assets/img/sunset.png'];
+var lista_imagens_mapas = ['./assets/maps/ascent.png', './assets/maps/bind.png', './assets/maps/brezze.png', './assets/maps/fracture.png', './assets/maps/haven.png', './assets/maps/icebox.png', './assets/maps/lotus.png', './assets/maps/pearl.png', './assets/maps/split.png', './assets/maps/sunset.png'];
 
 var i = 0;
 
@@ -38,7 +38,7 @@ var controle = 0;
         if (controle == 0) {
             conteudo2.style.display = 'block'
             controle++
-            button_down.innerHTML = '<img id="button_mudar" src="./assets/img/seta_cima.png"><span>Retrair</span><img id="button_mudar" src="./assets/img/seta_cima.png">';
+            button_down.innerHTML = '<img id="button_mudar" src="./assets/maps/seta_cima.png"><span>Retrair</span><img id="button_mudar" src="./assets/img/seta_cima.png">';
             
         }else if(controle == 1){
             conteudo2.style.display = 'none'

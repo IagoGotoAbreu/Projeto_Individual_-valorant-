@@ -77,24 +77,45 @@ function finishGame() {
     let mensagem = ""
 
     switch (true) {
-        case (acertos >= 90):
-            mensagem = "Excelente"
+        case (acertos == 100):
+            mensagem = '<img src="./assets/rank/radiante.png" style="width:40px; height:40px;">'
             break
-        case (acertos >= 90):
-            mensagem = "Muito Bom"
+        case (acertos == 90):
+            mensagem = '<img src="./assets/rank/imortal.png" style="width:50px; height:50px;">'
             break
-        case (acertos >= 90):
-            mensagem = "Bom"
+        case (acertos == 80):
+            mensagem = '<img src="./assets/rank/ascendente.png" style="width:40px; height:40px;">'
+            break
+        case (acertos == 70):
+            mensagem = '<img src="./assets/rank/diamante.png" style="width:40px; height:40px;">'
+            break
+        case (acertos == 60):
+            mensagem = '<img src="./assets/rank/platina.png" style="width:40px; height:40px;">'
+            break
+        case (acertos == 50):
+            mensagem = '<img src="./assets/rank/ouro.png" style="width:50px; height:50px;">'
+            break
+        case (acertos == 40):
+            mensagem = '<img src="./assets/rank/prata.png" style="width:50px; height:50px;">'
+            break
+        case (acertos == 30):
+            mensagem = '<img src="./assets/rank/bronze.png" style="width:50px; height:50px;">'
+            break
+        case (acertos == 20):
+            mensagem = '<img src="./assets/rank/ferro.png" style="width:40px; height:40px;">'
+            break
+        case (acertos == 10):
+            mensagem = '<img src="./assets/rank/ferro.png" style="width:40px; height:40px;">'
             break
         default:
-            mensagem = "Pode Melhorar"
+            mensagem = '<img src="./assets/rank/ferro.png" style="width:40px; height:40px;">'
     }
 
     $questionsContainer.innerHTML =
         `
     <p class="final-message">
         Você acertou ${totalCorrect} de ${totalQuestion} questões!
-        <span>Resultado: ${mensagem}</span>
+        <span style=''>Você é: ${mensagem}</span>
     </p>
     <div class="last_buttons">
     <button onclick=window.location.reload() class="button">

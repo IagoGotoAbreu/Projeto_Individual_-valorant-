@@ -741,8 +741,8 @@ transform: scale(1.2);
 
 
 #cenario {
-  margin-top: 40px;
-  padding-top: 40px;
+  /* margin-top: 40px; */
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -811,4 +811,68 @@ transform: scale(1.2);
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+#game {
+  padding-top: 80px;
+}
+
+#game .title h1 {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 35px;
+  margin-bottom: 48px;
+  color: var(--first-color);
+}
+
+#game .quiz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game .quiz .container {
+  background-color: #793f3f7d;
+  width: 76vw;
+  height: 46vh;
+  padding: 50px 34px;
+  border-radius: 80px;
+  cursor: pointer;
+  transition: 0.4s;
+  display: flex;
+}
+
+#game .quiz .container:hover {
+  transform: scale(1.02);
+}
+
+#game .quiz .column-1,
+#game .quiz .column-2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#game .quiz .column-1 img {
+  width: 480px;
+}
+
+/* #game .quiz .column-2 h3{
+  
+} */
+
+#game .quiz .column-2 p {
+  font-size: 1.2rem;
+  width: 496px;
+}
+
+#game .quiz .column-2 h2 {
+  margin-top: 32px;
+  margin-left: -36px;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  width: 500px;
 }
