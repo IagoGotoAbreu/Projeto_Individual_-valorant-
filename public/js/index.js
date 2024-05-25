@@ -38,7 +38,7 @@ var controle = 0;
         if (controle == 0) {
             conteudo2.style.display = 'block'
             controle++
-            button_down.innerHTML = '<img id="button_mudar" src="./assets/maps/seta_cima.png"><span>Retrair</span><img id="button_mudar" src="./assets/img/seta_cima.png">';
+            button_down.innerHTML = '<img id="button_mudar" src="./assets/img/seta_cima.png"><span>Retrair</span><img id="button_mudar" src="./assets/img/seta_cima.png">';
             
         }else if(controle == 1){
             conteudo2.style.display = 'none'
