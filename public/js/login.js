@@ -54,7 +54,7 @@ function entrar() {
 
                     setTimeout(function () {
                         window.location = "./quiz.html";
-                    }, 2000); // apenas para exibir o loading
+                    }, 500); // apenas para exibir o loading
 
                 });
 

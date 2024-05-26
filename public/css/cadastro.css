@@ -73,7 +73,7 @@ a {
 }
 
 #column-2 span{
-    font-family: Gunplay RG;
+    font-family: 'Gunplay RG';
     font-weight: bolder 100px;
     font-size: 28px;
 }
@@ -123,7 +123,7 @@ a {
 }
 
 #btn-cadastrar {
-    font-family: Gunplay RG;
+    font-family: 'Gunplay RG';
     font-size: 1.1rem;
     color: #ffffff;
     background-color: var(--first-color);
@@ -152,13 +152,13 @@ a {
 .nova-conta {
     margin: 4px 0 8px 0;
     text-align: center;
-    font-family: Gunplay RG;
+    font-family: 'Gunplay RG';
 }
 
 .nova-conta a {
     color: var(--first-color);
     transition: 0.2s;
-    font-family: Gunplay RG;
+    font-family: 'Gunplay RG';
 }
 
 .nova-conta a:hover {

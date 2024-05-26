@@ -39,14 +39,14 @@ a{
     justify-content: space-evenly;
 }
 
-.column-1 img {
+.coluna-1 img {
     height: 80vh;
 }
-.column-3 img {
+.coluna-3 img {
     height: 80vh;
 }
 
-.column-title{
+.coluna-titulo{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +65,7 @@ a{
     cursor: pointer;
 }
 
-.column-2 {
+.coluna-2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,13 +76,13 @@ a{
     padding: 36px 32px;
 }
 
-.column-2 span{
-    font-family: Gunplay RG;
+.coluna-2 span{
+    font-family: 'Gunplay RG';
     /* font-weight: bolder 100px; */
     font-size: 28px;
 }
 
-.column-2 .form {
+.coluna-2 .form {
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -128,7 +128,7 @@ a{
 }
 
 .esqueceu {
-    font-family: Gunplay RG;
+    font-family: 'Gunplay RG';
     align-self: flex-end;
     color: #ffffff;
     transition: 0.2s;
@@ -139,7 +139,7 @@ a{
 }
 
 #btn-entrar {
-    font-family: Gunplay RG;
+    font-family: 'Gunplay RG';
     font-size: 1.1rem;
     color: #ffffff;
     background-color: var(--first-color);
@@ -158,13 +158,13 @@ a{
 .nova-conta {
     margin: 4px 0 8px 0;
     text-align: center;
-    font-family: Gunplay RG;
+    font-family: 'Gunplay RG';
 }
 
 .nova-conta a {
     color: var(--first-color);
     transition: 0.2s;
-    font-family: Gunplay RG;
+    font-family: 'Gunplay RG';
 }
 
 .nova-conta a:hover {
