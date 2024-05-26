@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -19,14 +19,14 @@
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <!-- scripts do Chart.js - 2022-1 -->
+    scripts do Chart.js - 2022-1
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!--FONT AWESOME-->
+    FONT AWESOME
     <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
-<!-- <body onload=" atualizarFeed()"> -->
+<body onload=" atualizarFeed()">
 
 <body>
 
@@ -67,7 +67,7 @@
             </div>
 
             <div class="btns-dash" id="btnAquario">
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
+                O gráfico é chamado de acordo com o id (fk_aquario) do banco 
             </div>
             <div id="graficos">
             </div>
@@ -77,9 +77,9 @@
 
 </body>
 
-</html>
+</html> -->
 
-<script>
+<!-- <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     let proximaAtualizacao;
@@ -315,4 +315,80 @@
             });
 
     }
-</script>
+</script> -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant | DashBoard</title>
+    <link rel="icon" type="image/png" href="../assets/img/icon_logo.avif" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/dashboards.css">
+</head>
+
+<body>
+    <div class="menu">
+        <div class="line-1">
+            <img src="../assets/img/logo.png" alt="Valorant Logo">
+        </div>
+
+        <div class="line-2">
+            <button onclick="quiz()" class="nav-link">Quiz</button>
+
+            <button onclick="deshboard()" class="nav-link">Estatísticas</button>
+        </div>
+
+        <div class="line-3">
+            <div class="container-user">
+                <h3 id="menuNickname">Olá, </h3>
+            </div>
+
+            <div class="btn-container">
+                <img onclick="sair()" src="../assets/img/sair.png" alt="sair">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title-line">
+            <h1>Estatísticas gerais dos jogadores</h1>
+        </div>
+        <div class="statistics-line">
+            <div class="column-1">
+                <div class="line-1">
+                    <div class="kpi">
+                        <h4>Atingiram 100%</h4>
+                        <span id="kpi100"></span>
+                        <div></div>
+                    </div>
+
+                    <div class="kpi">
+                        <h4>Terminaram em até 1 minuto</h4>
+                        <span id="kpiR"></span>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="line-2">
+                    
+                </div>
+            </div>
+
+            <div class="column-2">
+                <div class="chart-container">
+                    <h4>Comparação com Outros Jogadores</h4>
+                    <div class="chart">
+                        <canvas id=""></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="../js/dashboard.js"></script>

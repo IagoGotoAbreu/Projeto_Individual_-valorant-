@@ -12,7 +12,8 @@
 :root {
     --first-color: #FF4654;
     --second-color: #111723;
-}
+    --third-color: #9e58587d;
+  }
 
 html, body {
     color: #ffffff;
@@ -66,7 +67,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #9e58587d;
+    background-color: var(--third-color);
     width: 480px;
     border-radius: 32px;
     padding: 36px 32px;

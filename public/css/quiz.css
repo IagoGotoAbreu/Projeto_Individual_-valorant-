@@ -12,6 +12,7 @@
 :root {
     --first-color: #FF4654;
     --second-color: #111723;
+    --third-color: #9e58587d;
   }
 
 button{
@@ -30,7 +31,7 @@ body{
 }
 
 .container{
-    background-color: #793f3f7d;
+    background-color: var(--third-color);
     width: 90%;
     max-width: 800px;
     border-radius: 32px;

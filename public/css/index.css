@@ -383,6 +383,7 @@ ALERTA
 :root {
   --first-color: #FF4654;
   --second-color: #111723;
+  --third-color: #9e58587d;
 }
 
 html,
@@ -609,7 +610,7 @@ transform: scale(1.2);
   width: 20vw;
   height: 50vh;
   border-radius: 32px;
-  background-color: #793f3f7d;
+  background-color: var(--third-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -729,7 +730,7 @@ transform: scale(1.2);
   align-items: center;
   text-align: center;
   justify-content: center;
-  background-color: #793f3f7d;
+  background-color: var(--third-color);
   border-radius: 32px;
   width: 726px;
   height: 435px;
@@ -805,7 +806,6 @@ transform: scale(1.2);
 #cenario h2 {
   font-size: 1.6rem;
   margin-bottom: 36px;
-  text-transform: uppercase;
   letter-spacing: 1px;
   display: flex;
   justify-content: center;
@@ -832,7 +832,7 @@ transform: scale(1.2);
 }
 
 #quiz .quiz .container {
-  background-color: #793f3f7d;
+  background-color: var(--third-color);
   width: 70vw;
   height: 40vh;
   padding: 54px 36px;
@@ -987,7 +987,7 @@ transform: scale(1.2);
   display: flex;
   justify-content: center;
   height: 270px;
-  background-color: #793f3f7d;
+  background-color: var(--third-color);
   position: relative;
 }
 
