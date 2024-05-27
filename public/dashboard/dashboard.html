@@ -300,7 +300,7 @@
 
                         myChart.update();
                     }
-
+                    
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
                     proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
                 });
@@ -310,10 +310,10 @@
                 proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
             }
         })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
-
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+        
     }
 </script> -->
 
@@ -328,6 +328,7 @@
     <link rel="icon" type="image/png" href="../assets/img/icon_logo.avif" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../css/dashboards.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -373,7 +374,7 @@
                     </div>
                 </div>
                 <div class="line-2">
-                    
+
                 </div>
             </div>
 
@@ -381,13 +382,52 @@
                 <div class="chart-container">
                     <h4>Comparação com Outros Jogadores</h4>
                     <div class="chart">
-                        <canvas id=""></canvas>
+                        <canvas id="myChartBarra"></canvas>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+
+    /* Gráfico de Barra */
+
+    const labelsBarra = [
+        'Usuario(você)',
+        'Player 1',
+        'Player 2',
+        'Player 3',
+        'Player 4',
+        'Player 5',
+        'Player 6',
+        'Player 7',
+    ];
+
+    const dataBarra = {
+        labels: labelsBarra,
+        datasets: [{
+            label: 'Pontuação',
+            backgroundColor: '#FF4654',
+            borderColor: '#FF4654',
+            data: [1, 7, 8, 4, 6, 5, 10, 9, 2],
+        }]
+    };
+
+    const configBarra = {
+        type: 'bar',
+        data: dataBarra,
+        options: {}
+    };
+
+</script>
+
+<script>
+    const myChartBarra = new Chart(
+        document.getElementById('myChartBarra'),
+        configBarra
+    );
+</script>
 
 </html>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
