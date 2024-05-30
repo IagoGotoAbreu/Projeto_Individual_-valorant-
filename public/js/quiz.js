@@ -59,12 +59,6 @@ function selectAnswer(event) {
     }
 
     document.querySelectorAll(".answer").forEach(button => {
-        // if (button.dataset.correct) {
-        //     button.classList.add("correct")
-        // } else {
-        //     // button.classList.add("incorrect")
-        // }
-
         button.disabled = true
     })
 
@@ -80,37 +74,37 @@ function finishGame() {
 
     switch (true) {
         case (acertos == 100):
-            mensagem = '<img src="./assets/rank/radiante.png" style="width:40px; height:40px;">'
+            mensagem = 'Radiante <img src="../assets/rank/radiante.png" style="width:40px; height:40px;">'
             break
         case (acertos == 90):
-            mensagem = '<img src="./assets/rank/imortal.png" style="width:50px; height:50px;">'
+            mensagem = 'Imortal <img src="../assets/rank/imortal.png" style="width:50px; height:50px;">'
             break
         case (acertos == 80):
-            mensagem = '<img src="./assets/rank/ascendente.png" style="width:40px; height:40px;">'
+            mensagem = 'Ascendente <img src="../assets/rank/ascendente.png" style="width:40px; height:40px;">'
             break
         case (acertos == 70):
-            mensagem = '<img src="./assets/rank/diamante.png" style="width:40px; height:40px;">'
+            mensagem = 'Diamante <img src="../assets/rank/diamante.png" style="width:40px; height:40px;">'
             break
         case (acertos == 60):
-            mensagem = '<img src="./assets/rank/platina.png" style="width:40px; height:40px;">'
+            mensagem = 'Platina <img src="../assets/rank/platina.png" style="width:40px; height:40px;">'
             break
         case (acertos == 50):
-            mensagem = '<img src="./assets/rank/ouro.png" style="width:50px; height:50px;">'
+            mensagem = 'Ouro <img src="../assets/rank/ouro.png" style="width:50px; height:50px;">'
             break
         case (acertos == 40):
-            mensagem = '<img src="./assets/rank/prata.png" style="width:50px; height:50px;">'
+            mensagem = 'Prata <img src="../assets/rank/prata.png" style="width:50px; height:50px;">'
             break
         case (acertos == 30):
-            mensagem = '<img src="./assets/rank/bronze.png" style="width:50px; height:50px;">'
+            mensagem = 'Bronze <img src="../assets/rank/bronze.png" style="width:50px; height:50px;">'
             break
         case (acertos == 20):
-            mensagem = '<img src="./assets/rank/ferro.png" style="width:40px; height:40px;">'
+            mensagem = 'Ferro <img src="../assets/rank/ferro.png" style="width:40px; height:40px;">'
             break
         case (acertos == 10):
-            mensagem = '<img src="./assets/rank/ferro.png" style="width:40px; height:40px;">'
+            mensagem = 'Ferro <img src="../assets/rank/ferro.png" style="width:40px; height:40px;">'
             break
         default:
-            mensagem = '<img src="./assets/rank/ferro.png" style="width:40px; height:40px;">'
+            mensagem = 'Ferro <img src="../assets/rank/ferro.png" style="width:40px; height:40px;">'
     }
 
     $questionsContainer.innerHTML =
@@ -227,7 +221,7 @@ const questions = [
 ]
 
 function dashboard() {
-    window.location.href = "./dashboard/dashboard.html"
+    window.location.href = "./dashboard.html"
 }
 var tempo;
 function iniciar_cronometro(){

@@ -12,10 +12,11 @@
 :root {
     --first-color: #FF4654;
     --second-color: #111723;
-    --third-color: #9e58587d;
-  }
+    --third-color: #793f3f7d;
+}
 
-html, body {
+html,
+body {
     color: #ffffff;
     height: 100%;
     width: 100%;
@@ -43,22 +44,23 @@ a {
 .column-1 img {
     height: 80vh;
 }
+
 .column-3 img {
     height: 80vh;
 }
 
-.column-title{
+.column-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4vh;
 }
 
-.titulo img{
+.titulo img {
     cursor: pointer;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
@@ -73,7 +75,7 @@ a {
     padding: 36px 32px;
 }
 
-#column-2 span{
+#column-2 span {
     font-family: 'Gunplay RG';
     font-weight: bolder 100px;
     font-size: 28px;
@@ -89,13 +91,13 @@ a {
     position: relative;
 }
 
-.input-container img{
-    position: absolute; 
-    width: 1.2vw; 
-    height: 1.2vw; 
-    margin-top: 3.8vh;  
+.input-container img {
+    position: absolute;
+    width: 1.2vw;
+    height: 1.2vw;
+    margin-top: 3.8vh;
     margin-left: 0.7vw;
-}  
+}
 
 .input {
     font-size: 1rem;
@@ -119,7 +121,8 @@ a {
     color: #d9d9d9;
 }
 
-#button_fechar, #button_ocultar{
+#button_fechar,
+#button_ocultar {
     cursor: pointer;
 }
 
@@ -140,12 +143,12 @@ a {
     background-color: #922626;
 }
 
-#button_ocultar{
+#button_ocultar {
     position: absolute;
     margin-left: 45vh;
 }
 
-#button_fechar{
+#button_fechar {
     position: absolute;
     margin-left: 45vh;
 }
@@ -166,9 +169,11 @@ a {
     color: #ff7e7e;
 }
 
-#validacao_nickname, #validacao_email, #validacao_senha, #validacao_confirmar_senha{
+#validacao_nickname,
+#validacao_email,
+#validacao_senha,
+#validacao_confirmar_senha {
     font-family: 'Gunplay RG';
     color: red;
     font-size: 17px;
 }
-    

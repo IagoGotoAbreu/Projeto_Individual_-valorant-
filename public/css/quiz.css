@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Gunplay RG';
     src: url('../assets/font/gunplay\ rg.otf') format('opentype');
-  }
+}
 
 * {
     margin: 0;
@@ -12,14 +12,14 @@
 :root {
     --first-color: #FF4654;
     --second-color: #111723;
-    --third-color: #9e58587d;
-  }
+    --third-color: #793f3f7d;
+}
 
-button{
+button {
     cursor: pointer;
 }
 
-body{
+body {
     font-family: 'Gunplay RG';
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fundo_quiz.jpg");
     color: white;
@@ -30,7 +30,7 @@ body{
     align-items: center;
 }
 
-.container{
+.container {
     background-color: var(--third-color);
     width: 90%;
     max-width: 800px;
@@ -43,7 +43,7 @@ body{
     padding: 32px;
 }
 
-.questions_container{
+.questions_container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -52,29 +52,29 @@ body{
     gap: 24px;
 }
 
-.question{
+.question {
     font-size: 24px;
     text-align: center;
 }
 
-.answers_container{
+.answers_container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
 }
 
-.last_buttons{
+.last_buttons {
     display: flex;
     flex-direction: row;
     gap: 70px;
 }
 
-.next_question{
+.next_question {
     margin-top: 32px;
 }
 
-.button{
+.button {
     font-family: 'Gunplay RG', sans-serif;
     background-color: var(--first-color);
     color: #ffffff;
@@ -86,56 +86,32 @@ body{
     transition: 0.3s;
 }
 
-.button:not(:disabled):hover{
+.button:not(:disabled):hover {
     background-color: #ff465691;
 }
 
-.answer:disabled{
+.answer:disabled {
     cursor: not-allowed;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.correct{
+.correct {
     background-color: green;
 }
 
-.incorrect{
-background-color: rgb(156, 0, 0);
+.incorrect {
+    background-color: rgb(156, 0, 0);
 }
 
-.final-message{
+.final-message {
     font-size: 20px;
     text-align: center;
 }
 
-.final-message span{
+.final-message span {
     display: block;
     margin-top: 8px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

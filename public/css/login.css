@@ -12,10 +12,11 @@
 :root {
     --first-color: #FF4654;
     --second-color: #111723;
-    --third-color: #9e58587d;
-  }
+    --third-color: #793f3f7d;
+}
 
-html, body {
+html,
+body {
     color: #ffffff;
     height: 100%;
     width: 100%;
@@ -26,7 +27,7 @@ html, body {
     align-items: center;
 }
 
-a{
+a {
     all: unset;
     cursor: pointer;
     user-select: none;
@@ -43,26 +44,27 @@ a{
 .coluna-1 img {
     height: 80vh;
 }
+
 .coluna-3 img {
     height: 80vh;
 }
 
-.coluna-titulo{
+.coluna-titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 7vh;
 }
 
-.titulo img{
+.titulo img {
     cursor: pointer;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-#button_ocultar{
+#button_ocultar {
     cursor: pointer;
 }
 
@@ -77,9 +79,8 @@ a{
     padding: 36px 32px;
 }
 
-.coluna-2 span{
+.coluna-2 span {
     font-family: 'Gunplay RG';
-    /* font-weight: bolder 100px; */
     font-size: 28px;
 }
 
@@ -93,15 +94,15 @@ a{
     position: relative;
 }
 
-.input-container img{
-    position: absolute; 
-    width: 1.2vw; 
-    height: 1.2vw; 
-    margin-top: 3.8vh;  
+.input-container img {
+    position: absolute;
+    width: 1.2vw;
+    height: 1.2vw;
+    margin-top: 3.8vh;
     margin-left: 0.7vw;
 }
 
-#button_ocultar{
+#button_ocultar {
     position: absolute;
     margin-left: 45vh;
 }
@@ -172,11 +173,9 @@ a{
     color: #ff7e7e;
 }
 
-.erro{
+.erro {
     font-family: 'Gunplay RG';
     color: red;
     text-align: center;
     font-size: 17px;
 }
-
-    
