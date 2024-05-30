@@ -12,23 +12,31 @@ var img = document.getElementById("img");
 
 img.src = './assets/maps/ascent.png';
 
-var lista_imagens_mapas = ['./assets/maps/ascent.png', './assets/maps/bind.png', './assets/maps/brezze.png', './assets/maps/fracture.png', './assets/maps/haven.png', './assets/maps/icebox.png', './assets/maps/lotus.png', './assets/maps/pearl.png', './assets/maps/split.png', './assets/maps/sunset.png'];
+var lista_imagens_mapas = [];
+var imagens = [
+    'ascent.png', 'bind.png', 'brezze.png', 'fracture.png', 
+    'haven.png', 'icebox.png', 'lotus.png', 'pearl.png', 
+    'split.png', 'sunset.png'
+];
+for (var index = 0; index < imagens.length; index++) {
+    lista_imagens_mapas.push('./assets/maps/' + imagens[index]);
+}
 
 var i = 0;
 
 function next(){
-    if(i == 9){
+    if (i == lista_imagens_mapas.length - 1) {
         i = -1;
     }
-    i++
+    i++;
     img.src = lista_imagens_mapas[i];
 }
 
 function back(){
-    if(i == 0){
-        i = 10;
+    if (i == 0) {
+        i = lista_imagens_mapas.length;
     }
-    i--
+    i--;
     img.src = lista_imagens_mapas[i];
 }
 

@@ -46,12 +46,14 @@ function resetState() {
     $nextQuestionButton.classList.add("hide")
 }
 
+var controle_acertos = 0
 function selectAnswer(event) {
     var answerClicked = event.target;
 
     if (answerClicked.dataset.correct) {
         answerClicked.classList.add("correct");
         totalCorrect++
+        controle_acertos++
     } else {
         answerClicked.classList.add("incorrect");
     }
@@ -126,6 +128,9 @@ function finishGame() {
     </button>
     </div>
     `
+    pausar_cronometro()
+
+    cadastrar_respostas()
 }
 
 const questions = [
@@ -221,6 +226,59 @@ const questions = [
     },
 ]
 
-function dashboard(){
+function dashboard() {
     window.location.href = "./dashboard/dashboard.html"
+}
+var tempo;
+function iniciar_cronometro(){
+    tempo = 0
+    cronometro = setInterval(function(){
+        tempo++;
+        console.log(tempo)
+    }, 1000)
+}
+function pausar_cronometro(){
+    clearInterval(cronometro);
+}
+
+function cadastrar_respostas() {
+    var idUsuario = sessionStorage.ID_USUARIO
+
+    fetch("/quiz/inserirDadosQuiz", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            respostas_certasServer: controle_acertos,
+            idUsuarioServer: idUsuario,
+            tempoServer: tempo
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+        console.log(resposta);
+
+        if (resposta.ok) {
+            console.log(resposta);
+
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+            });
+
+        } else {
+
+            console.log("Houve um erro ao tentar realizar o quiz");
+
+            resposta.text().then(texto => {
+                console.error(texto);
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+    return false;
+
 }

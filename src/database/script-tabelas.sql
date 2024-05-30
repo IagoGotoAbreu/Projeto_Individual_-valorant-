@@ -1,77 +1,32 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-
-/*
-comandos para mysql server
-*/
-
--- CREATE DATABASE aquatech;
-
--- USE aquatech;
-
--- CREATE TABLE empresa (
--- 	id INT PRIMARY KEY AUTO_INCREMENT,
--- 	razao_social VARCHAR(50),
--- 	cnpj CHAR(14)
--- );
-
--- CREATE TABLE usuario (
--- 	id INT PRIMARY KEY AUTO_INCREMENT,
--- 	nome VARCHAR(50),
--- 	email VARCHAR(50),
--- 	senha VARCHAR(50),
--- 	fk_empresa INT,
--- 	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
--- );
-
--- CREATE TABLE aviso (
--- 	id INT PRIMARY KEY AUTO_INCREMENT,
--- 	titulo VARCHAR(100),
--- 	descricao VARCHAR(150),
--- 	fk_usuario INT,
--- 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
--- );
-
--- create table aquario (
--- /* em nossa regra de negócio, um aquario tem apenas um sensor */
--- 	id INT PRIMARY KEY AUTO_INCREMENT,
--- 	descricao VARCHAR(300),
--- 	fk_empresa INT,
--- 	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
--- );
-
--- /* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
-
--- create table medida (
--- 	id INT PRIMARY KEY AUTO_INCREMENT,
--- 	dht11_umidade DECIMAL,
--- 	dht11_temperatura DECIMAL,
--- 	luminosidade DECIMAL,
--- 	lm35_temperatura DECIMAL,
--- 	chave TINYINT,
--- 	momento DATETIME,
--- 	fk_aquario INT,
--- 	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
--- );
-
--- insert into empresa (razao_social, cnpj) values ('Empresa 1', '00000000000000');
--- insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
-
 create database valorant;
+drop database valorant;
 use valorant;
-
-create table quiz (
-idQuiz int primary key auto_increment,
-respostas_certas varchar(45),
-respostas_erradas varchar(45));
 
 create table usuario (
 idUsuario int primary key auto_increment,
 nickname varchar(45),
 email varchar(45),
-senha varchar(45),
-fkQuiz int,
-foreign key (fkQuiz) references quiz(idQuiz));
+senha varchar(45));
 
-select * from usuario;
+create table quiz (
+idQuiz int default 1,
+respostas_certas int,
+duracao int,
+momento datetime default current_timestamp,
+fkUsuario int,
+foreign key (fkUsuario) references usuario(idUsuario),
+primary key (idQuiz, fkUsuario));
+
+select * from quiz;
+
+insert into usuario values
+(default, 'goto', 'goto@gmail.com', 'mgtu6965');
+
+insert into quiz values
+(1, '7', '32', default, 1);
+
+select respostas_certas from quiz where fkUsuario = 1;
+select respostas_certas from quiz where fkUsuario <> 1 order by momento desc limit 7;
+select respostas_certas from quiz where respostas_certas = 10;
+select duracao from quiz where duracao <= 60;
+
