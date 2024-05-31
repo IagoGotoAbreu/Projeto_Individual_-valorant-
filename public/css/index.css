@@ -393,6 +393,24 @@ li:hover {
   align-items: center;
 }
 
+#cenario .tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 20px;
+}
+
+th,
+td {
+  border: 2px solid var(--first-color);
+  padding: 8px;
+  text-align: left;
+  font-weight: 500;
+  text-align: center;
+}
+
 #cenario .coluna-2 {
   width: 12px;
   height: 240px;
@@ -409,6 +427,16 @@ li:hover {
   align-items: center;
 }
 
+#cenario .coluna-3 td {
+  font-size: 15px;
+}
+
+#cenario .rankings h1 {
+  color: white;
+  font-weight: 500;
+  margin-top: 5vh;
+}
+
 #cenario .img-container {
   height: 320px;
   width: 548px;
@@ -419,7 +447,7 @@ li:hover {
   justify-content: center;
 }
 
-#cenario img {
+#cenario .container img {
   height: 300px;
   width: 528px;
   border-radius: 50px;
@@ -433,6 +461,11 @@ li:hover {
   justify-content: center;
   align-items: center;
   position: relative;
+  font-weight: 500;
+}
+
+#cenario .rankings img {
+  width: 70vw;
 }
 
 #quiz {
