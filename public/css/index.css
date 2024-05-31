@@ -151,6 +151,7 @@ li:hover {
   color: var(--first-color);
   font-size: 35px;
   letter-spacing: 2.5px;
+  font-weight: 500;
 }
 
 #home .container .coluna-2 div p {
@@ -200,6 +201,7 @@ li:hover {
   font-size: 35px;
   margin-bottom: 30px;
   margin-left: -100px;
+  font-weight: 500;
 }
 
 #sobre .coluna-1 p {
@@ -229,6 +231,7 @@ li:hover {
   font-size: 35px;
   color: #FF4654;
   margin-bottom: 10vh;
+  font-weight: 500;
 }
 
 #agentes .linha {
@@ -273,7 +276,7 @@ li:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 #agentes .agentes-container h2:before {
@@ -285,6 +288,7 @@ li:hover {
   background-color: var(--first-color);
   position: absolute;
   bottom: -12px;
+  font-weight: 500;
 }
 
 #agentes .agentes-container div {
@@ -325,6 +329,7 @@ li:hover {
   display: inline-block;
   position: relative;
   margin-bottom: 60px;
+  font-weight: 500;
 }
 
 #mapas .subTitulo {
@@ -377,6 +382,7 @@ li:hover {
   font-size: 35px;
   margin-bottom: 48px;
   color: var(--first-color);
+  font-weight: 500;
 }
 
 #cenario .container {
@@ -435,6 +441,7 @@ td {
   color: white;
   font-weight: 500;
   margin-top: 5vh;
+  font-weight: 500;
 }
 
 #cenario .img-container {
@@ -478,6 +485,7 @@ td {
   font-size: 35px;
   margin-bottom: 42px;
   color: var(--first-color);
+  font-weight: 500;
 }
 
 #quiz .quiz {
@@ -529,6 +537,7 @@ td {
   font-size: 27px;
   letter-spacing: 2px;
   width: 500px;
+  font-weight: 500;
 }
 
 #desenvolvedor {
@@ -541,6 +550,7 @@ td {
   text-align: center;
   color: var(--first-color);
   margin-bottom: -20vh;
+  font-weight: 500;
 }
 
 #desenvolvedor .linha-2 {
@@ -562,8 +572,7 @@ td {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  object-fit: cover;
-  /* Garante que a imagem se ajuste bem dentro do círculo */
+  object-fit: cover; /* Garante que a imagem se ajuste bem dentro do círculo */
   margin-top: -16px;
 }
 
@@ -576,6 +585,7 @@ td {
   letter-spacing: 1px;
   margin-bottom: 15px;
   font-size: 32px;
+  font-weight: 500;
 }
 
 #desenvolvedor .linha-2 .coluna-2 .container p {
@@ -589,6 +599,7 @@ td {
   color: white;
   margin-bottom: -20vh;
   margin-top: -20vh;
+  font-weight: 500;
 }
 
 #desenvolvedor .linha-4 {
@@ -612,122 +623,44 @@ td {
   margin-top: 46px;
 }
 
-#desenvolvedor .linha-4 .coluna-4 .container {
-  margin-left: 28px;
-  width: 600px;
-}
-
 #desenvolvedor .linha-4 .coluna-2 .container h2 {
   letter-spacing: 1px;
   margin-bottom: 15px;
   font-size: 32px;
+  font-weight: 500;
 }
 
 #desenvolvedor .linha-4 .coluna-2 .container p {
   font-size: 24px;
+  margin-top: 2vw;
 }
 
 #footer {
-  margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  height: 270px;
   background-color: var(--second-color);
-  position: relative;
-}
-
-#footer .coluna-1,
-#footer .coluna-3 {
+  width: 100%;
+  height: 30vh;
   display: flex;
-  flex-direction: column;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  width: 30%;
 }
 
-#footer .coluna-1 img {
-  width: 22vw;
+#footer p {
+  max-width: 70vw;
+  margin-left: 10vw;
 }
 
-#footer .coluna-1 h5 {
-  font-size: 17px;
-  margin-top: 12px;
-  letter-spacing: 1px;
-  font-weight: 500;
+#footer .linha {
+  background-color: white;
+  width: 90vw;
+  height: 2px;
 }
 
-#footer .coluna-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  margin-right: 32px;
-}
-
-#footer .coluna-2 div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 20px;
-}
-
-#footer .coluna-2 div a {
-  font-size: 18px;
-  display: inline-block;
-  margin-bottom: 20px;
-  position: relative;
+#footer img {
+  width: 55px;
   transition: 0.4s;
 }
 
-#footer .coluna-2 div a:hover {
-  transform: scale(1.1);
-}
-
-#footer .coluna-3 .redes {
-  display: flex;
-  justify-content: flex-start;
-  gap: 3vw;
-}
-
-#footer .coluna-3 .redes a {
-  transition: 0.4s;
-}
-
-#footer .coluna-3 .redes a:hover {
-  transform: scale(1.1);
-}
-
-#footer .coluna-3 .redes img {
-  height: 40px;
-}
-
-#footer .coluna-3 .contato {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-#footer .coluna-3 .contato div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-#footer .coluna-3 .contato img {
-  margin-right: 8px;
-}
-
-#footer .coluna-3 .contato .email,
-#footer .coluna-3 .contato .telefone {
-  height: 20px;
-}
-
-#footer .coluna-3 .contato .endereco {
-  height: 20px;
-}
-
-#footer .coluna-3 .contato h5 {
-  font-size: 0.9rem;
-  font-weight: 500;
+#footer img:hover {
+  transform: scale(0.9);
 }
