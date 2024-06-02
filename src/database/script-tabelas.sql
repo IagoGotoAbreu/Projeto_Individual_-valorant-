@@ -18,6 +18,7 @@ foreign key (fkUsuario) references usuario(idUsuario),
 primary key (idQuiz, fkUsuario));
 
 select * from quiz;
+select * from usuario;
 
 insert into usuario values
 (default, 'goto', 'goto@gmail.com', 'mgtu6965');
@@ -27,6 +28,7 @@ insert into quiz values
 
 select respostas_certas from quiz where fkUsuario = 1;
 select respostas_certas from quiz where fkUsuario <> 1 order by momento desc limit 7;
-select respostas_certas from quiz where respostas_certas = 10;
-select duracao from quiz where duracao <= 60;
+select count(*) as pontos_rad from quiz where respostas_certas = 10;
+select count(*) as tempo_rapido from quiz where duracao <= 60;
+
 

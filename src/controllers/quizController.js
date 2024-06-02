@@ -29,6 +29,68 @@ function inserirDadosQuiz(req, res) {
     }
 }
 
+function buscarDadosQuizAcertos(req, res) {
+
+    var idUsuario = req.params.idUsuario;
+
+    console.log(`Buscando acertos do usuario`);
+
+    quizModel.buscarDadosQuizAcertos(idUsuario).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas acertos.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function buscarDadosQuizOutrosAcertos(req, res) {
+
+    const outros_acertos = 7;
+
+    var idUsuario = req.params.idUsuario;
+
+    console.log(`Recuperando os ultimos ${outros_acertos} acertos dos 7 últimos usuários`);
+
+    quizModel.buscarDadosQuizOutrosAcertos(idUsuario, outros_acertos).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os últimos acertos.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function buscarDadosQuizAcertosRad(req, res) {
+    quizModel.buscarDadosQuizAcertosRad()
+         .then(resultado => {
+            res.status(200).json(resultado);
+    }).catch( erro => {
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function buscarDadosQuizTempo(req, res) {
+    quizModel.buscarDadosQuizTempo()
+         .then(resultado => {
+            res.status(200).json(resultado);
+    }).catch( erro => {
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
-    inserirDadosQuiz
+    inserirDadosQuiz,
+    buscarDadosQuizAcertos,
+    buscarDadosQuizOutrosAcertos,
+    buscarDadosQuizAcertosRad,
+    buscarDadosQuizTempo
 }

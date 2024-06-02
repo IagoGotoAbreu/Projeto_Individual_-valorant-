@@ -76,7 +76,8 @@ li:hover {
 }
 
 #home .nav .nav-lista {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Gunplay RG';
+  font-weight: 500;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -97,16 +98,18 @@ li:hover {
 }
 
 #home .nav .nav-lista li {
+  font-family: 'Gunplay RG';
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: #ffffff;
   letter-spacing: 2px;
   margin: 0 32px;
 }
 
 #home .nav .nav-lista .btn-entrar {
+  font-family: 'Gunplay RG';
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 12px 28px;
   color: #ffffff;
   border-radius: 12px;
