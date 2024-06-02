@@ -128,7 +128,7 @@ const configPie = {
         labels: {
           color: "white",
           font: {
-            size: 20,
+            size: 15,
           },
         },
       },
@@ -140,6 +140,4 @@ const myChartPie = new Chart(document.getElementById("myChartPie"), configPie);
 
 window.addEventListener("load", () => {
   pegarKpi();
-  // getRankingQuestionError();
-  // getFeedbackStarsCount();
 });
