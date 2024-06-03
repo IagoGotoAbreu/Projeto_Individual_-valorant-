@@ -1,5 +1,13 @@
 function quiz() {
-  window.location.href = "../dashboard/quiz.html";
+  window.location.href = "./quiz.html";
+}
+
+function feedback() {
+  window.location.href = "./feedback.html";
+}
+
+function dashboard() {
+  window.location.href = "./dashboard.html";
 }
 
 function sair() {
@@ -8,6 +16,9 @@ function sair() {
 
 const kpiRadiante = document.getElementById("kpiRadiante");
 const kpiTempo = document.getElementById("kpiTempo");
+
+const usuario = sessionStorage.NOME_USUARIO;
+menuNickname.innerHTML = usuario;
 
 function pegarKpi() {
   fetch(`/quiz/buscarDadosQuizAcertosRad`).then((res) => {
@@ -27,21 +38,20 @@ function pegarKpi() {
   });
 }
 
-function pegarAcertos() {}
 
-const usuario = sessionStorage.NOME_USUARIO;
-menuNickname.innerHTML = usuario;
+// function pegarAcertos() {
 
-/* Gráfico de Barra */
+// }
+
 
 const labelsBarra = [
-  "Player 1",
-  "Player 2",
-  "Player 3",
-  "Player 4",
-  "Player 5",
-  "Player 6",
-  "Player 7",
+  `P1`,
+  `P2`,
+  `P3`,
+  `P4`,
+  `P5`,
+  `P6`,
+  `P7`,
   `${usuario}`,
 ];
 
@@ -55,7 +65,7 @@ const dataBarra = {
       hoverBackgroundColor: "#FF4654",
       borderWidth: [3, 3, 3, 3, 3, 3, 3, 6],
       borderColor: "#111723",
-      data: [1, 7, 2, 4, 6, 5, 1, 3, 2],
+      data: [2, 2, 2, 2, 2, 2, 2, 4],
     },
   ],
 };
@@ -140,4 +150,5 @@ const myChartPie = new Chart(document.getElementById("myChartPie"), configPie);
 
 window.addEventListener("load", () => {
   pegarKpi();
+  // pegarAcertos();
 });

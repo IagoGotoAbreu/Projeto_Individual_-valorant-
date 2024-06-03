@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant | FeedBack</title>
+    <link rel="icon" type="image/png" href="../assets/img/icon_logo.avif" />
+    <link rel="stylesheet" href="../css/feedback.css">
+</head>
+
+<body>
+    <div class="menu">
+        <div class="line-1">
+            <img src="../assets/img/logo.png" alt="Valorant Logo">
+        </div>
+
+        <div class="line-2">
+            <button onclick="quiz()" class="nav-link">Quiz</button>
+            <button onclick="feedback()" class="nav-link">FeedBack</button>
+            <button onclick="dashboard()" class="nav-link">Estatísticas</button>
+        </div>
+
+        <div class="line-3">
+            <div class="container-user">
+                <h3>Olá, <span id="menuNickname">Usuário</span>!</h3>
+            </div>
+
+            <div class="btn-container">
+                <img onclick="sair()" src="../assets/img/sair.png" alt="sair">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title-line">
+            <h1>Avalie o Quiz!</h1>
+        </div>
+        <div class="feedback-line">
+            <div class="container">
+                <p class="feedback-text">Dê uma nota para esse Quiz!</p>
+                
+                <div class="feedback-stars-container">
+                    <img onclick="setStarNumber(this)" id="feedbackStar1" src="../assets/img/star.png"
+                        data-value="1">
+                    <img onclick="setStarNumber(this)" id="feedbackStar2" src="../assets/img/star.png"
+                        data-value="2">
+                    <img onclick="setStarNumber(this)" id="feedbackStar3" src="../assets/img/star.png"
+                        data-value="3">
+                    <img onclick="setStarNumber(this)" id="feedbackStar4" src="../assets/img/star.png"
+                        data-value="4">
+                    <img onclick="setStarNumber(this)" id="feedbackStar5" src="../assets/img/star.png"
+                        data-value="5">
+                </div>
+                <div id="irDash">
+                    <button id="rateBtn" onclick="saveFeedback()">Avaliar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="../js/feedback.js"></script>

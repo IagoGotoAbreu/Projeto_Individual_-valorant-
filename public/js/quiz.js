@@ -117,13 +117,12 @@ function finishGame() {
     <button onclick=window.location.reload() class="button">
     Refazer Quiz
     </button>
-    <button onclick="dashboard()" class="button">
-    Ver na Dashboard
+    <button onclick="feedback()" class="button">
+    Avaliar Quiz
     </button>
     </div>
     `
     pausar_cronometro()
-
     cadastrar_respostas()
 }
 
@@ -220,9 +219,10 @@ const questions = [
     },
 ]
 
-function dashboard() {
-    window.location.href = "./dashboard.html"
+function feedback() {
+    window.location.href = "./feedback.html"
 }
+
 var tempo;
 function iniciar_cronometro(){
     tempo = 0
@@ -231,6 +231,7 @@ function iniciar_cronometro(){
         console.log(tempo)
     }, 1000)
 }
+
 function pausar_cronometro(){
     clearInterval(cronometro);
 }
@@ -249,7 +250,7 @@ function cadastrar_respostas() {
             tempoServer: tempo
         })
     }).then(function (resposta) {
-        console.log("ESTOU NO THEN DO entrar()!")
+        console.log("ESTOU NO THEN DO cadastrar_respostas()!")
         console.log(resposta);
 
         if (resposta.ok) {

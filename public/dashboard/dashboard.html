@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valorant | DashBoard</title>
     <link rel="icon" type="image/png" href="../assets/img/icon_logo.avif" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../css/dashboards.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -19,8 +18,8 @@
 
         <div class="line-2">
             <button onclick="quiz()" class="nav-link">Quiz</button>
-
-            <button onclick="deshboard()" class="nav-link">Estatísticas</button>
+            <button onclick="feedback()" class="nav-link">FeedBack</button>
+            <button onclick="dashboard()" class="nav-link">Estatísticas</button>
         </div>
 
         <div class="line-3">
@@ -48,14 +47,14 @@
                     </div>
 
                     <div class="kpi">
-                        <h4>Terminaram em até <br> 1 minuto</h4>
+                        <h4>Terminaram em até <br> 30 segundos</h4>
                         <span id="kpiTempo"></span>
                         <div></div>
                     </div>
                 </div>
                 <div class="line-2">
                     <div class="chart-container">
-                        <h4>Avaliações do Quiz</h4>
+                        <h4>Avaliações do Quiz em %</h4>
                         <div class="chart">
                             <canvas id="myChartPie"></canvas>
                         </div>
@@ -76,5 +75,4 @@
 </body>
 </html>
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="../js/dashboard.js"></script>
