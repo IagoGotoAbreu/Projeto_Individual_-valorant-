@@ -14,6 +14,22 @@ function ocultar() {
     }
 }
 
+
+function validar() {
+    var email = input_email.value;
+    var senha = input_senha.value;
+    var validado = true
+
+    if (email == "" || senha == "") {
+        nExiste.innerHTML = `<div class="erro">E-mail e/ou Senha Incorretos!</div>`
+        validado = false
+    }
+    if (validado) {
+        entrar()
+        document.getElementById("coluna-2").innerHTML = '<span style="font-size: 22px; text-align: center">Login Realizado com Sucesso!<br>Redirecionando para a Dashboard...</span>';
+    }
+}
+
 function entrar() {
     // aguardar();
 
@@ -54,7 +70,7 @@ function entrar() {
                     
                     setTimeout(function () {
                         window.location = "./dashboard/quiz.html";
-                    }, 500); // apenas para exibir o loading
+                    }, 2000); // apenas para exibir o loading
                     
                 });
                 
