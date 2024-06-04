@@ -26,7 +26,7 @@ function validar() {
     }
     if (validado) {
         entrar()
-        document.getElementById("coluna-2").innerHTML = '<span style="font-size: 22px; text-align: center">Login Realizado com Sucesso!<br>Redirecionando para a Dashboard...</span>';
+        document.getElementById("coluna-2").innerHTML = '<span style="font-size: 22px; text-align: center">Login Realizado com Sucesso!<br>Redirecionando para o Quiz...</span>';
     }
 }
 

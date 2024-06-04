@@ -114,9 +114,6 @@ function finishGame() {
         <span style=''>Você é: ${mensagem}</span>
     </p>
     <div class="last_buttons">
-    <button onclick=window.location.reload() class="button">
-    Refazer Quiz
-    </button>
     <button onclick="feedback()" class="button">
     Avaliar Quiz
     </button>
