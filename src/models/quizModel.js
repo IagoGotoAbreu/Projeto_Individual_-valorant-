@@ -13,19 +13,19 @@ function inserirDadosQuiz(acertos, idUsuario, tempo) {
     return database.executar(instrucaoSql);
 }
 
-function buscarDadosQuizAcertos(acertos) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function buscarDadosQuizAcertos(): ", acertos)
+function buscarDadosQuizAcertos(idUsuario) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function buscarDadosQuizAcertos(): ", idUsuario)
     var instrucaoSql = `
-        select respostas_certas as acertos_usuario from quiz where fkUsuario = ${idUsuario};
+    select respostas_certas, nickname from quiz join usuario on fkUsuario = idUsuario where fkUsuario = ${idUsuario};
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
 
-function buscarDadosQuizOutrosAcertos(acertos) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function buscarDadosQuizAcertos(): ", acertos)
+function buscarDadosQuizOutrosAcertos(idUsuario, limite_dados) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function buscarDadosQuizOutrosAcertos(): ", idUsuario, limite_dados)
     var instrucaoSql = `
-        select respostas_certas from quiz where fkUsuario <> ${idUsuario} order by momento desc limit 7;
+    select respostas_certas, nickname from quiz join usuario on fkUsuario = idUsuario where fkUsuario <> ${idUsuario} order by momento desc limit ${limite_dados};
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -43,8 +43,8 @@ function buscarDadosQuizAcertosRad() {
 function buscarDadosQuizTempo() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function buscarDadosQuizTempo(): ")
     var instrucaoSql = `
-        select count(*) as tempo_rapido from quiz where duracao <= 30 and respostas_certas = 10;
-    `;
+        select count(*) as tempo_rapido from quiz where duracao <= 30;
+    `;      
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }

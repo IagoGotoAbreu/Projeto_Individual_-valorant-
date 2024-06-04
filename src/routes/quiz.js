@@ -8,11 +8,11 @@ router.post("/inserirDadosQuiz", function (req, res) {
     quizController.inserirDadosQuiz(req, res);
 });
 
-router.get("/buscarDadosQuizAcertos/idUsuario", function (req, res) {
+router.get("/buscarDadosQuizAcertos/:idUsuario", function (req, res) {
     quizController.buscarDadosQuizAcertos(req, res);
 });
 
-router.get("/buscarDadosQuizOutrosAcertos", function (req, res) {
+router.get("/buscarDadosQuizOutrosAcertos/:idUsuario", function (req, res) {
     quizController.buscarDadosQuizOutrosAcertos(req, res);
 });
 

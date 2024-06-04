@@ -50,13 +50,13 @@ function buscarDadosQuizAcertos(req, res) {
 
 function buscarDadosQuizOutrosAcertos(req, res) {
 
-    const outros_acertos = 7;
+    const limite_dados = 7;
 
     var idUsuario = req.params.idUsuario;
 
-    console.log(`Recuperando os ultimos ${outros_acertos} acertos dos 7 últimos usuários`);
+    console.log(`Recuperando os ultimos ${limite_dados} acertos`);
 
-    quizModel.buscarDadosQuizOutrosAcertos(idUsuario, outros_acertos).then(function (resultado) {
+    quizModel.buscarDadosQuizOutrosAcertos(idUsuario, limite_dados).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
