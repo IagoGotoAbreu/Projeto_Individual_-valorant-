@@ -59,7 +59,7 @@ function pegarDados() {
         resposta.json().then((json) => {
           console.log(json);
           acertos_usuario = json[0].respostas_certas;
-          criarGraficoDados();
+          pegarOutrosDados();
         });
       } else {
         console.log("Houve um erro ao cadastrar feedback");
@@ -88,7 +88,6 @@ var dadosPlayer4;
 var dadosPlayer5;
 var dadosPlayer6;
 var dadosPlayer7;
-pegarOutrosDados();
 function pegarOutrosDados() {
   fetch(`/quiz/buscarDadosQuizOutrosAcertos/${idUsuario}`, {
     method: "GET",
@@ -189,7 +188,7 @@ function criarGraficoDados() {
           ticks: {
             color: "white",
             font: {
-              size: 15,
+              size: 13,
             },
           },
           grid: {
@@ -216,12 +215,12 @@ function criarGraficoDados() {
   );
 }
 
+var total = 0;
 var uma_estrela = 0;
 var duas_estrela = 0;
 var tres_estrela = 0;
 var quatro_estrela = 0;
 var cinco_estrela = 0;
-
 pegarFeedback();
 function pegarFeedback() {
   fetch(`/feedback/buscarFeedback`, {
@@ -239,11 +238,17 @@ function pegarFeedback() {
 
         resposta.json().then((json) => {
           console.log(json);
-          uma_estrela = json[0].uma_estrelas;
-          duas_estrela = json[0].duas_estrelas;
-          tres_estrela = json[0].tres_estrelas;
-          quatro_estrela = json[0].quatro_estrelas;
-          cinco_estrela = json[0].cinco_estrelas;
+          uma_estrela = Number(json[0].uma_estrelas);
+          duas_estrela = Number(json[0].duas_estrelas);
+          tres_estrela = Number(json[0].tres_estrelas);
+          quatro_estrela = Number(json[0].quatro_estrelas);
+          cinco_estrela = Number(json[0].cinco_estrelas);
+          total = uma_estrela + duas_estrela + tres_estrela + quatro_estrela + cinco_estrela;
+          uma_estrela = (uma_estrela / total * 100).toFixed(0);
+          duas_estrela = (duas_estrela / total * 100).toFixed(0);
+          tres_estrela = (tres_estrela / total * 100).toFixed(0);
+          quatro_estrela = (quatro_estrela / total * 100).toFixed(0);
+          cinco_estrela = (cinco_estrela / total * 100).toFixed(0);
           criarGraficosFeedback();
         });
       } else {
@@ -275,11 +280,11 @@ function criarGraficosFeedback() {
         ],
         label: "Porcentagem",
         backgroundColor: [
-          "#FF4654",
-          "#3b0780",
-          "#FFCC00",
-          "#AE6427",
-          "#4B97D2",
+          "#8B0000",
+          "#8B4500",
+          "#8B8000",
+          "#006400",
+          "#00008B",
         ],
         hoverOffset: 4,
       },
