@@ -11,7 +11,15 @@ function dashboard() {
 }
 
 function sair() {
-  window.location.href = "../index.html";
+  Swal.fire({
+    title: "Tem certeza que deseja sair?",
+    confirmButtonText: "Sim",
+    showCancelButton: true,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "../index.html";
+    }
+  });
 }
 
 const kpiRadiante = document.getElementById("kpiRadiante");
