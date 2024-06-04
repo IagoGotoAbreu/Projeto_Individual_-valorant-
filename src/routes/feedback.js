@@ -8,6 +8,10 @@ router.post("/inserirFeedback/:idUsuario", function (req, res) {
     feedbackController.inserirFeedback(req, res);
 });
 
+router.get("/buscarFeedback", function (req, res) {
+    feedbackController.buscarFeedback(req, res);
+});
+
 router.get("/buscarUsuario/:idUsuario", function (req, res) {
     feedbackController.buscarUsuario(req, res);
 });

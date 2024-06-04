@@ -11,8 +11,10 @@ function sair(){
     window.location.href = "../index.html"
 }
 
-const idUsuario = sessionStorage.NOME_USUARIO;
-menuNickname.innerHTML = idUsuario;
+const usuario = sessionStorage.NOME_USUARIO;
+menuNickname.innerHTML = usuario;
+
+var idUsuario = sessionStorage.ID_USUARIO;
 
 const feedbackText = document.querySelector(".feedback-text");
 const feedbackStar1 = document.getElementById("feedbackStar1");
@@ -112,14 +114,3 @@ function saveFeedback() {
     }
 }
 
-window.addEventListener("load", () => {
-    //get the player feedback stars
-    fetch(`/feedback/buscarUsuario/${idUsuario}`)
-        .then(res => {
-            res.json().then(res => {
-                if (res.length > 0) {
-                    starsNumber = res[0].estrelas;
-                }
-            });
-        });
-});

@@ -28,6 +28,26 @@ function inserirFeedback(req, res) {
     }
 }
 
+function buscarFeedback(req, res) {
+        // Passe os valores como parâmetro e vá para o arquivo feedbackModel.js
+        feedbackModel.buscarFeedback()
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o feedback! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    
+}
+
 function buscarUsuario(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var idUsuario = req.params.idUsuario;
@@ -57,5 +77,6 @@ function buscarUsuario(req, res) {
 
 module.exports = {
     inserirFeedback,
+    buscarFeedback,
     buscarUsuario
 }
