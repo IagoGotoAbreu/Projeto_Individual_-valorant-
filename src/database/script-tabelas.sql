@@ -41,4 +41,4 @@ from feedback;
 select count(*) as pontos_rad from quiz where respostas_certas = 10;
 select count(*) as tempo_rapido from quiz where duracao <= 60;
 
-select count(estrela) as feedbackFeito from feedback join usuario on fkUsuario = idUsuario where fkUsuario = 5;
+select estrela as feedbackFeito from feedback join usuario on fkUsuario = idUsuario where fkUsuario = 1;
