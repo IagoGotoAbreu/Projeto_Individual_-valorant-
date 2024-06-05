@@ -8,7 +8,15 @@ function dashboard() {
   window.location.href = "./dashboard.html";
 }
 function sair() {
-  window.location.href = "../index.html";
+  Swal.fire({
+    title: "Tem certeza que deseja sair?",
+    confirmButtonText: "Sim",
+    showCancelButton: true,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = "../index.html";
+    }
+  });
 }
 
 const usuario = sessionStorage.NOME_USUARIO;
@@ -16,6 +24,7 @@ menuNickname.innerHTML = usuario;
 
 var idUsuario = sessionStorage.ID_USUARIO;
 
+const container = document.getElementById("containerDentro");
 const texto = document.querySelector(".texto");
 const estrela1 = document.getElementById("estrela1");
 const estrela2 = document.getElementById("estrela2");
@@ -127,57 +136,117 @@ function salvarFeedback() {
 
 
 var feedbackVotado = 0;
-pegarFeedback()
-function pegarFeedback() {
-  fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then(function (resposta) {
-      console.log("ESTOU NO THEN pegarFeedbackFeito()!");
-      console.log(resposta);
 
-      if (resposta.ok) {
-        return resposta.json();
-      } else {
-        console.log("Houve um erro ao buscar os dados");
-        return resposta.text();
-      }
-    })
-    .then(function (dados) {
-      console.error(dados);
-      console.log(dados);
-      feedbackVotado = dados[0].feedbackFeito;
-      if(feedbackVotado == 1){
-        votacaoFeita();
-      }
-    })
-    .catch(function (erro) {
-      console.log(erro);
-    });
-}
+fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`)
+        .then(res => {
+            res.json().then(res => {
+                if (res.length > 0) {
+                    feedbackVotado = res[0].feedbackFeito;
+                    console.log(feedbackVotado)
+                    if(feedbackVotado >= 1) {
+                      votacaoFeita()
+                    }
+                }
+            });
+        });
+  
+  function votacaoFeita() {
 
-function votacaoFeita() {
-  // document.getElementById("containerDentro")
-
-  containerDentro.innerHTML = `
+  if (feedbackVotado == 1) {
+    containerDentro.innerHTML = `
     <p class="texto">Você já votou!</p>
-                
+
     <div class="estrelas-container">
-    <img onclick="votarUmaEstrela()" id="estrela1" src="../assets/img/star.png"
+    <img style="cursor: auto" id="estrela1" src="../assets/img/full-star.png"
     data-value="1">
-    <img onclick="votarDuasEstrela()" id="estrela2" src="../assets/img/star.png"
+    <img style="cursor: auto" id="estrela2" src="../assets/img/star.png"
     data-value="2">
-    <img onclick="votarTresEstrela()" id="estrela3" src="../assets/img/star.png"
+    <img style="cursor: auto" id="estrela3" src="../assets/img/star.png"
     data-value="3">
-    <img onclick="votarQuatroEstrela()" id="estrela4" src="../assets/img/star.png"
+    <img style="cursor: auto" id="estrela4" src="../assets/img/star.png"
     data-value="4">
-    <img onclick="votarCincoEstrela()" id="estrela5" src="../assets/img/star.png"
+    <img style="cursor: auto" id="estrela5" src="../assets/img/star.png"
     data-value="5">
     </div>
-    
+
     <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
     `
+  } else if (feedbackVotado == 2) {
+    containerDentro.innerHTML = `
+    <p class="texto">Você já votou!</p>
+
+    <div class="estrelas-container">
+    <img style="cursor: auto" id="estrela1" src="../assets/img/full-star.png"
+    data-value="1">
+    <img style="cursor: auto" id="estrela2" src="../assets/img/full-star.png"
+    data-value="2">
+    <img style="cursor: auto" id="estrela3" src="../assets/img/star.png"
+    data-value="3">
+    <img style="cursor: auto" id="estrela4" src="../assets/img/star.png"
+    data-value="4">
+    <img style="cursor: auto" id="estrela5" src="../assets/img/star.png"
+    data-value="5">
+    </div>
+
+    <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
+    `
+  } else if (feedbackVotado == 3) {
+    console.log("eu")
+    containerDentro.innerHTML = `
+    <p class="texto">Você já votou!</p>
+
+    <div class="estrelas-container">
+    <img  style="cursor: auto" id="estrela1" src="../assets/img/full-star.png"
+    data-value="1">
+    <img  style="cursor: auto" id="estrela2" src="../assets/img/full-star.png"
+    data-value="2">
+    <img  style="cursor: auto" id="estrela3" src="../assets/img/full-star.png"
+    data-value="3">
+    <img  style="cursor: auto" id="estrela4" src="../assets/img/star.png"
+    data-value="4">
+    <img  style="cursor: auto" id="estrela5" src="../assets/img/star.png"
+    data-value="5">
+    </div>
+
+    <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
+    `
+  } else if (feedbackVotado == 4) {
+    containerDentro.innerHTML = `
+    <p class="texto">Você já votou!</p>
+
+    <div class="estrelas-container">
+    <img style="cursor: auto" id="estrela1" src="../assets/img/full-star.png"
+    data-value="1">
+    <img style="cursor: auto" id="estrela2" src="../assets/img/full-star.png"
+    data-value="2">
+    <img style="cursor: auto" id="estrela3" src="../assets/img/full-star.png"
+    data-value="3">
+    <img style="cursor: auto" id="estrela4" src="../assets/img/full-star.png"
+    data-value="4">
+    <img style="cursor: auto" id="estrela5" src="../assets/img/star.png"
+    data-value="5">
+    </div>
+
+    <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
+    `
+  } else if (feedbackVotado == 5) {
+    containerDentro.innerHTML = `
+    <p class="texto">Você já votou!</p>
+
+    <div class="estrelas-container">
+    <img style="cursor: auto" id="estrela1" src="../assets/img/full-star.png"
+    data-value="1">
+    <img style="cursor: auto" id="estrela2" src="../assets/img/full-star.png"
+    data-value="2">
+    <img style="cursor: auto" id="estrela3" src="../assets/img/full-star.png"
+    data-value="3">
+    <img style="cursor: auto" id="estrela4" src="../assets/img/full-star.png"
+    data-value="4">
+    <img style="cursor: auto" id="estrela5" src="../assets/img/full-star.png"
+    data-value="5">
+    </div>
+
+    <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
+    `
+  }
 }

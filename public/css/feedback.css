@@ -147,20 +147,18 @@ a {
   font-weight: 500;
 }
 
-.feedback {
+.feedback{
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-#containerDentro {
   background-color: var(--third-color);
   width: 55vw;
   height: 45vh;
   margin-top: 5vw;
   border-radius: 32px;
-}
+  margin-left: 11vw;
+  }
 
 .texto {
   font-size: 22px;

@@ -59,7 +59,7 @@ function buscarFeedbackFeito(idUsuario) {
     // Insira exatamente a query do banco aqui, lembrando da nicknamenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        select count(estrela) as feedbackFeito from feedback join usuario on fkUsuario = idUsuario where fkUsuario = ${idUsuario};
+        select estrela as feedbackFeito from feedback join usuario on fkUsuario = idUsuario where fkUsuario = ${idUsuario};
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
