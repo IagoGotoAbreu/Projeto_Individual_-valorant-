@@ -39,4 +39,6 @@ select sum(case when estrela = 1 then 1 else 0 end) as uma_estrelas,
 from feedback;
 
 select count(*) as pontos_rad from quiz where respostas_certas = 10;
-select count(*) as tempo_rapido from quiz where duracao <= 30;
+select count(*) as tempo_rapido from quiz where duracao <= 60;
+
+select count(estrela) as feedbackFeito from feedback join usuario on fkUsuario = idUsuario where fkUsuario = 5;

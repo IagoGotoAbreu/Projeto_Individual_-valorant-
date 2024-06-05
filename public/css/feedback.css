@@ -129,14 +129,14 @@ a {
   flex-direction: column;
 }
 
-.title-line {
+.titulo {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 16vh;
 }
 
-.title-line h1 {
+.titulo h1 {
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -147,14 +147,14 @@ a {
   font-weight: 500;
 }
 
-.feedback-line {
+.feedback {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.feedback-line .container {
+#containerDentro {
   background-color: var(--third-color);
   width: 55vw;
   height: 45vh;
@@ -162,24 +162,24 @@ a {
   border-radius: 32px;
 }
 
-.feedback-text {
+.texto {
   font-size: 22px;
   font-weight: 500;
 }
 
-.feedback-stars-container {
+.estrelas-container {
   display: flex;
   justify-content: center;
   padding: 24px 0;
 }
 
-.feedback-stars-container img {
+.estrelas-container img {
   margin: 0 8px;
   height: 60px;
   cursor: pointer;
 }
 
-#rateBtn {
+#salvarBtn {
   font-family: "Gunplay RG", sans-serif;
   background-color: var(--first-color);
   color: #ffffff;

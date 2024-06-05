@@ -75,8 +75,36 @@ function buscarUsuario(req, res) {
     }
 }
 
+function buscarFeedbackFeito(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idUsuario = req.params.idUsuario;
+
+    // Faça as validações dos valores
+    if (idUsuario == undefined) {
+        res.status(400).send("Seu usuario está undefined!");
+    } else {
+        // Passe os valores como parâmetro e vá para o arquivo feedbackModel.js
+        feedbackModel.buscarFeedbackFeito(idUsuario)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao buscar se o usuario ja fez feedback! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     inserirFeedback,
     buscarFeedback,
-    buscarUsuario
+    buscarUsuario,
+    buscarFeedbackFeito
 }

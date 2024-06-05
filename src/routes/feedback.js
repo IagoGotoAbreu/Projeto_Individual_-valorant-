@@ -16,4 +16,8 @@ router.get("/buscarUsuario/:idUsuario", function (req, res) {
     feedbackController.buscarUsuario(req, res);
 });
 
+router.get("/buscarFeedbackFeito/:idUsuario", function (req, res) {
+    feedbackController.buscarFeedbackFeito(req, res);
+});
+
 module.exports = router;
