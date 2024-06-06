@@ -1,9 +1,11 @@
 function feedback() {
   window.location.href = "./feedback.html";
 }
+
 function dashboard() {
   window.location.href = "./dashboard.html";
 }
+
 function sair() {
   Swal.fire({
     title: "Tem certeza que deseja sair?",
@@ -130,7 +132,6 @@ function salvarFeedback() {
     return false;
   }
 }
-
 
 var feedbackVotado = 0;
 

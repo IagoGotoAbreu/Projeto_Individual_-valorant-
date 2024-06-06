@@ -4,9 +4,6 @@ function home() {
     window.location.href = "index.html"
 }
 
-
-
-
 function fechar() {
     if (ipt_senha.type == "password") {
         ipt_senha.type = "text";
@@ -55,33 +52,24 @@ function validar() {
     }
     if (validado) {
         cadastrar()
-        document.getElementById("column-2").innerHTML = '<span style="font-size: 22px; text-align: center">Cadastro Realizado com Sucesso!<br>Redirecionando para a Tela de Login...</span>';
+        document.getElementById("coluna-2").innerHTML = '<span style="font-size: 22px; text-align: center">Cadastro Realizado com Sucesso!<br>Redirecionando para a Tela de Login...</span>';
     }
 }
 
 function cadastrar() {
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
     var nicknameVar = input_nickname.value;
     var emailVar = input_email.value;
     var senhaVar = ipt_senha.value;
-    // var empresaVar = listaEmpresas.value
 
-    //   setInterval(sumirMensagem, 5000);
-    // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            // crie um atributo que recebe o valor recuperado aqui
-            // Agora vá para o arquivo routes/usuario.js
             nicknameServer: nicknameVar,
             emailServer: emailVar,
             senhaServer: senhaVar,
-            // empresaServer: empresaVar
         }),
     })
         .then(function (resposta) {
@@ -93,5 +81,4 @@ function cadastrar() {
         .catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         });
-
 }

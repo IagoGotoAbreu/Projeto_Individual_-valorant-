@@ -49,20 +49,20 @@ a {
   user-select: none;
 }
 
-.menu .line-1 {
+.menu .linha-1 {
   height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.menu .line-1 img {
+.menu .linha-1 img {
   height: 6vh;
   user-select: none;
   pointer-events: none;
 }
 
-.menu .line-2 {
+.menu .linha-2 {
   height: 40%;
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@ a {
   background-color: #9e5858;
 }
 
-.menu .line-3 {
+.menu .linha-3 {
   height: 30%;
   display: flex;
   flex-direction: column;
@@ -98,18 +98,18 @@ a {
   margin-bottom: 20px;
 }
 
-.menu .container-user {
+.menu .container-usuario {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 200px;
 }
 
-.menu .container-user {
+.menu .container-usuario {
   overflow: hidden;
 }
 
-.menu .container-user h3 {
+.menu .container-usuario h3 {
   font-weight: 500;
   margin-bottom: 4px;
   overflow: hidden;

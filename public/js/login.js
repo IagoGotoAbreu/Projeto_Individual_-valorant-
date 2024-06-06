@@ -31,8 +31,6 @@ function validar() {
 }
 
 function entrar() {
-    // aguardar();
-
     var emailVar = input_email.value;
     var senhaVar = input_senha.value;
 
@@ -40,7 +38,6 @@ function entrar() {
         nExiste.innerHTML = `<div class="erro">E-mail e/ou Senha Incorretos!</div>`
     }
     else {
-        
         
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
@@ -66,11 +63,10 @@ function entrar() {
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-                    // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
                     
                     setTimeout(function () {
                         window.location = "./dashboard/quiz.html";
-                    }, 2000); // apenas para exibir o loading
+                    }, 2000); 
                     
                 });
                 
@@ -80,7 +76,6 @@ function entrar() {
                 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    // finalizarAguardar(texto);
                 });
             }
 

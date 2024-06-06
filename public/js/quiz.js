@@ -59,6 +59,9 @@ function selectAnswer(event) {
     }
 
     document.querySelectorAll(".answer").forEach(button => {
+        if (button.dataset.correct) {
+            button.classList.add("correct")
+        }
         button.disabled = true
     })
 

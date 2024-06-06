@@ -41,15 +41,15 @@ a {
     justify-content: space-evenly;
 }
 
-.column-1 img {
+.coluna-1 img {
     height: 80vh;
 }
 
-.column-3 img {
+.coluna-3 img {
     height: 80vh;
 }
 
-.column-title {
+.coluna-titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +64,7 @@ a {
     display: none;
 }
 
-#column-2 {
+#coluna-2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,13 +75,13 @@ a {
     padding: 36px 32px;
 }
 
-#column-2 span {
+#coluna-2 span {
     font-family: 'Gunplay RG';
     font-weight: bolder 100px;
     font-size: 28px;
 }
 
-#column-2 .form {
+#coluna-2 .form {
     display: flex;
     flex-direction: column;
     width: 90%;

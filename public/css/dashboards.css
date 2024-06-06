@@ -49,20 +49,20 @@ a {
   user-select: none;
 }
 
-.menu .line-1 {
+.menu .linha-1 {
   height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.menu .line-1 img {
+.menu .linha-1 img {
   height: 6vh;
   user-select: none;
   pointer-events: none;
 }
 
-.menu .line-2 {
+.menu .linha-2 {
   height: 40%;
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@ a {
   background-color: #9e5858;
 }
 
-.menu .line-3 {
+.menu .linha-3 {
   height: 30%;
   display: flex;
   flex-direction: column;
@@ -98,18 +98,18 @@ a {
   margin-bottom: 20px;
 }
 
-.menu .container-user {
+.menu .container-usuario {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 200px;
 }
 
-.menu .container-user {
+.menu .container-usuario {
   overflow: hidden;
 }
 
-.menu .container-user h3 {
+.menu .container-usuario h3 {
   font-weight: 500;
   margin-bottom: 4px;
   overflow: hidden;
@@ -130,13 +130,13 @@ a {
   user-select: none;
 }
 
-.title-line {
+.titulo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.title-line h1 {
+.titulo h1 {
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -147,12 +147,12 @@ a {
   font-weight: 500;
 }
 
-.statistics-line {
+.estatisticas {
   display: flex;
   height: 88%;
 }
 
-.statistics-line .column-1 {
+.estatisticas .coluna-1 {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -160,7 +160,7 @@ a {
   margin-top: 38px;
 }
 
-.statistics-line .column-1 .line-1 {
+.estatisticas .coluna-1 .linha-1 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -200,7 +200,7 @@ a {
   height: 30%;
 }
 
-.column-1 .line-2 .chart-container {
+.coluna-1 .linha-2 .chart-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -213,19 +213,19 @@ a {
   border-radius: 32px;
 }
 
-.column-1 .line-2 .chart-container h4 {
+.coluna-1 .linha-2 .chart-container h4 {
   font-weight: 500;
   font-size: 20px;
 }
 
-.column-2 {
+.coluna-2 {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.column-2 .chart-container {
+.coluna-2 .chart-container {
   font-size: 28px;
   font-weight: 500;
   text-align: center;
@@ -239,7 +239,7 @@ a {
   justify-content: space-evenly;
 }
 
-.column-2 h4 {
+.coluna-2 h4 {
   height: 10%;
   font-weight: 500;
 }
