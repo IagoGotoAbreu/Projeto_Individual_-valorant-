@@ -600,7 +600,7 @@ td {
   font-size: 32px;
   text-align: center;
   color: white;
-  margin-bottom: -20vh;
+  margin-bottom: -80px;
   margin-top: -20vh;
   font-weight: 500;
 }
@@ -608,6 +608,7 @@ td {
 #desenvolvedor .linha-4 {
   display: flex;
   justify-content: center;
+  height: 84vh;
 }
 
 #desenvolvedor .linha-4 .coluna-1,
@@ -626,6 +627,13 @@ td {
   margin-top: 46px;
 }
 
+#desenvolvedor .linha-4 .coluna-1 .radidi {
+  height: 80px;
+  /* width: 100px; */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 #desenvolvedor .linha-4 .coluna-2 .container h2 {
   letter-spacing: 1px;
   margin-bottom: 15px;
@@ -634,8 +642,15 @@ td {
 }
 
 #desenvolvedor .linha-4 .coluna-2 .container p {
-  font-size: 24px;
+  font-size: 22px;
   margin-top: 2vw;
+}
+
+#video .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin-bottom: 3vw;
 }
 
 #footer {
@@ -646,6 +661,7 @@ td {
   text-align: center;
   justify-content: center;
   align-items: center;
+  margin-top: 8vw;
 }
 
 #footer p {
