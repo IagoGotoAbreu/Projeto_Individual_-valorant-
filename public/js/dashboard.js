@@ -13,6 +13,7 @@ function sair() {
     showCancelButton: true,
   }).then((result) => {
     if (result.isConfirmed) {
+      sessionStorage.clear();
       window.location.href = "../index.html";
     }
   });
