@@ -72,13 +72,16 @@ function cadastrar() {
             senhaServer: senhaVar,
         }),
     })
-        .then(function (resposta) {
-            console.log("resposta: ", resposta);
+        .then(function (
+            // resposta
+        ) {
+            // console.log("resposta: ", resposta);
             setTimeout(() => {
                 window.location = "./login.html";
             }, "2000");
         })
-        .catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
+        // .catch(function (resposta) {
+        //     console.log(`#ERRO: ${resposta}`);
+        // })
+        ;
 }

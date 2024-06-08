@@ -55,27 +55,31 @@ function pegarDados() {
     },
   })
     .then(function (resposta) {
-      console.log("ESTOU NO THEN DO pegarDados()!");
-      console.log(resposta);
+      // console.log("ESTOU NO THEN DO pegarDados()!");
+      // console.log(resposta);
 
       if (resposta.ok) {
-        console.log(resposta);
+        // console.log(resposta);
 
         resposta.json().then((json) => {
-          console.log(json);
+          // console.log(json);
           acertos_usuario = json[0].respostas_certas;
           pegarOutrosDados();
         });
       } else {
-        console.log("Houve um erro ao cadastrar feedback");
+        // console.log("Houve um erro ao cadastrar feedback");
 
-        resposta.text().then((texto) => {
-          console.error(texto);
+        resposta.text().then((
+          // texto
+        ) => {
+          // console.error(texto);
         });
       }
     })
-    .catch(function (erro) {
-      console.log(erro);
+    .catch(function (
+      // erro
+    ) {
+      // console.log(erro);
     });
 }
 
@@ -101,19 +105,19 @@ function pegarOutrosDados() {
     },
   })
     .then(function (resposta) {
-      console.log("ESTOU NO THEN pegarOutrosDados()!");
-      console.log(resposta);
+      // console.log("ESTOU NO THEN pegarOutrosDados()!");
+      // console.log(resposta);
 
       if (resposta.ok) {
         return resposta.json();
       } else {
-        console.log("Houve um erro ao buscar os dados");
+        // console.log("Houve um erro ao buscar os dados");
         return resposta.text();
       }
     })
     .then(function (dados) {
-      console.error(dados);
-      console.log(dados);
+      // console.error(dados);
+      // console.log(dados);
       player1 = dados[0].nickname;
       dadosPlayer1 = dados[0].respostas_certas;
       player2 = dados[1].nickname;
@@ -130,8 +134,10 @@ function pegarOutrosDados() {
       dadosPlayer7 = dados[6].respostas_certas;
       criarGraficoDados();
     })
-    .catch(function (erro) {
-      console.log(erro);
+    .catch(function (
+      // erro
+    ) {
+      // console.log(erro);
     });
 }
 
@@ -235,14 +241,14 @@ function pegarFeedback() {
     },
   })
     .then(function (resposta) {
-      console.log("ESTOU NO THEN DO saveFeedback()!");
-      console.log(resposta);
+      // console.log("ESTOU NO THEN DO saveFeedback()!");
+      // console.log(resposta);
 
       if (resposta.ok) {
-        console.log(resposta);
+        // console.log(resposta);
 
         resposta.json().then((json) => {
-          console.log(json);
+          // console.log(json);
           uma_estrela = Number(json[0].uma_estrelas);
           duas_estrela = Number(json[0].duas_estrelas);
           tres_estrela = Number(json[0].tres_estrelas);
@@ -257,15 +263,19 @@ function pegarFeedback() {
           criarGraficosFeedback();
         });
       } else {
-        console.log("Houve um erro ao cadastrar feedback");
+        // console.log("Houve um erro ao cadastrar feedback");
 
-        resposta.text().then((texto) => {
-          console.error(texto);
+        resposta.text().then((
+          // texto
+        ) => {
+          // console.error(texto);
         });
       }
     })
-    .catch(function (erro) {
-      console.log(erro);
+    .catch(function (
+      // erro
+    ) {
+      // console.log(erro);
     });
 }
 

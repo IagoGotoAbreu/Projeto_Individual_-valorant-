@@ -108,26 +108,32 @@ function salvarFeedback() {
       }),
     })
       .then(function (resposta) {
-        console.log("ESTOU NO THEN DO salvarFeedback()!");
-        console.log(resposta);
+        // console.log("ESTOU NO THEN DO salvarFeedback()!");
+        // console.log(resposta);
 
         if (resposta.ok) {
-          console.log(resposta);
+          // console.log(resposta);
 
-          resposta.json().then((json) => {
-            console.log(json);
-            console.log(JSON.stringify(json));
+          resposta.json().then((
+            // json
+          ) => {
+            // console.log(json);
+            // console.log(JSON.stringify(json));
           });
         } else {
-          console.log("Houve um erro ao cadastrar feedback");
+          // console.log("Houve um erro ao cadastrar feedback");
 
-          resposta.text().then((texto) => {
-            console.error(texto);
+          resposta.text().then((
+            // texto
+          ) => {
+            // console.error(texto);
           });
         }
       })
-      .catch(function (erro) {
-        console.log(erro);
+      .catch(function (
+        // erro
+      ) {
+        // console.log(erro);
       });
 
     return false;
@@ -141,7 +147,7 @@ fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`)
             res.json().then(res => {
                 if (res.length > 0) {
                     feedbackVotado = res[0].feedbackFeito;
-                    console.log(feedbackVotado)
+                    // console.log(feedbackVotado)
                     if(feedbackVotado >= 1) {
                       votacaoFeita()
                     }
@@ -190,7 +196,7 @@ fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`)
     <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
     `
   } else if (feedbackVotado == 3) {
-    console.log("eu")
+    // console.log("eu")
     containerDentro.innerHTML = `
     <p class="texto">Você já votou!</p>
 

@@ -3,7 +3,6 @@ var router = express.Router();
 
 var feedbackController = require("../controllers/feedbackController");
 
-//Recebendo os dados do html e direcionando para a função cadastrar de quizController.js
 router.post("/inserirFeedback/:idUsuario", function (req, res) {
     feedbackController.inserirFeedback(req, res);
 });

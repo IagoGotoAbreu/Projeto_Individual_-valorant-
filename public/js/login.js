@@ -14,7 +14,6 @@ function ocultar() {
     }
 }
 
-
 function validar() {
     var email = input_email.value;
     var senha = input_senha.value;
@@ -39,8 +38,8 @@ function entrar() {
     }
     else {
         
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
+        // console.log("FORM LOGIN: ", emailVar);
+        // console.log("FORM SENHA: ", senhaVar);
         
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -52,14 +51,14 @@ function entrar() {
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
+            // console.log("ESTOU NO THEN DO entrar()!")
             
             if (resposta.ok) {
-                console.log(resposta);
+                // console.log(resposta);
                 
                 resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
+                    // console.log(json);
+                    // console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
@@ -74,13 +73,17 @@ function entrar() {
                 
                 nExiste.innerHTML = `<div class="erro">E-mail e/ou Senha Incorretos!</div>`
                 
-                resposta.text().then(texto => {
-                    console.error(texto);
+                resposta.text().then((
+                    // texto
+                ) => {
+                    // console.error(texto);
                 });
             }
 
-        }).catch(function (erro) {
-            console.log(erro);
+        }).catch(function (
+            // erro
+        ) {
+            // console.log(erro);
         })
 
         return false;

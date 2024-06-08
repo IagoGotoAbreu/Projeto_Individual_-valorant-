@@ -250,28 +250,30 @@ function cadastrar_respostas() {
             tempoServer: tempo
         })
     }).then(function (resposta) {
-        console.log("ESTOU NO THEN DO cadastrar_respostas()!")
-        console.log(resposta);
+        // console.log("ESTOU NO THEN DO cadastrar_respostas()!")
+        // console.log(resposta);
 
         if (resposta.ok) {
-            console.log(resposta);
+            // console.log(resposta);
 
             resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
+                // console.log(json);
+                // console.log(JSON.stringify(json));
             });
 
         } else {
 
-            console.log("Houve um erro ao tentar realizar o quiz");
+            // console.log("Houve um erro ao tentar realizar o quiz");
 
-            resposta.text().then(texto => {
-                console.error(texto);
+            resposta.text().then((
+                // texto
+            ) => {
+                // console.error(texto);
             });
         }
 
     }).catch(function (erro) {
-        console.log(erro);
+        // console.log(erro);
     })
 
     return false;
