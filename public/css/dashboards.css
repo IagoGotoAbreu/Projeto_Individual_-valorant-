@@ -96,6 +96,7 @@ a {
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .menu .container-usuario {
@@ -109,7 +110,7 @@ a {
   overflow: hidden;
 }
 
-.menu .container-usuario h3 {
+.menu .container-usuario span {
   font-weight: 500;
   margin-bottom: 4px;
   overflow: hidden;
