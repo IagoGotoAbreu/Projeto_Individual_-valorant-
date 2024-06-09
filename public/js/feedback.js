@@ -107,56 +107,24 @@ function salvarFeedback() {
         estrelaServer: estrelaNumber,
       }),
     })
-      .then(function (resposta) {
-        // console.log("ESTOU NO THEN DO salvarFeedback()!");
-        // console.log(resposta);
-
-        if (resposta.ok) {
-          // console.log(resposta);
-
-          resposta.json().then((
-            // json
-          ) => {
-            // console.log(json);
-            // console.log(JSON.stringify(json));
-          });
-        } else {
-          // console.log("Houve um erro ao cadastrar feedback");
-
-          resposta.text().then((
-            // texto
-          ) => {
-            // console.error(texto);
-          });
-        }
-      })
-      .catch(function (
-        // erro
-      ) {
-        // console.log(erro);
-      });
-
     return false;
   }
 }
 
 var feedbackVotado = 0;
 
-fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`)
-        .then(res => {
-            res.json().then(res => {
-                if (res.length > 0) {
-                    feedbackVotado = res[0].feedbackFeito;
-                    // console.log(feedbackVotado)
-                    if(feedbackVotado >= 1) {
-                      votacaoFeita()
-                    }
-                }
-            });
-        });
-  
-  function votacaoFeita() {
+fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`).then((res) => {
+  res.json().then((res) => {
+    if (res.length > 0) {
+      feedbackVotado = res[0].feedbackFeito;
+      if (feedbackVotado >= 1) {
+        votacaoFeita();
+      }
+    }
+  });
+});
 
+function votacaoFeita() {
   if (feedbackVotado == 1) {
     containerDentro.innerHTML = `
     <p class="texto">Você já votou!</p>
@@ -175,7 +143,7 @@ fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`)
     </div>
 
     <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
-    `
+    `;
   } else if (feedbackVotado == 2) {
     containerDentro.innerHTML = `
     <p class="texto">Você já votou!</p>
@@ -194,9 +162,8 @@ fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`)
     </div>
 
     <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
-    `
+    `;
   } else if (feedbackVotado == 3) {
-    // console.log("eu")
     containerDentro.innerHTML = `
     <p class="texto">Você já votou!</p>
 
@@ -214,7 +181,7 @@ fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`)
     </div>
 
     <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
-    `
+    `;
   } else if (feedbackVotado == 4) {
     containerDentro.innerHTML = `
     <p class="texto">Você já votou!</p>
@@ -233,7 +200,7 @@ fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`)
     </div>
 
     <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
-    `
+    `;
   } else if (feedbackVotado == 5) {
     containerDentro.innerHTML = `
     <p class="texto">Você já votou!</p>
@@ -252,6 +219,6 @@ fetch(`/feedback/buscarFeedbackFeito/${idUsuario}`)
     </div>
 
     <button class="btn" onclick="dashboard()">Ir para DashBoard</button>
-    `
+    `;
   }
 }

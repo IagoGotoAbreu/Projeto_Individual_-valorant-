@@ -55,32 +55,13 @@ function pegarDados() {
     },
   })
     .then(function (resposta) {
-      // console.log("ESTOU NO THEN DO pegarDados()!");
-      // console.log(resposta);
-
       if (resposta.ok) {
-        // console.log(resposta);
-
         resposta.json().then((json) => {
-          // console.log(json);
           acertos_usuario = json[0].respostas_certas;
           pegarOutrosDados();
         });
-      } else {
-        // console.log("Houve um erro ao cadastrar feedback");
-
-        resposta.text().then((
-          // texto
-        ) => {
-          // console.error(texto);
-        });
-      }
+      } 
     })
-    .catch(function (
-      // erro
-    ) {
-      // console.log(erro);
-    });
 }
 
 var player1;
@@ -105,40 +86,29 @@ function pegarOutrosDados() {
     },
   })
     .then(function (resposta) {
-      // console.log("ESTOU NO THEN pegarOutrosDados()!");
-      // console.log(resposta);
-
       if (resposta.ok) {
         return resposta.json();
       } else {
-        // console.log("Houve um erro ao buscar os dados");
         return resposta.text();
       }
     })
-    .then(function (dados) {
-      // console.error(dados);
-      // console.log(dados);
-      player1 = dados[0].nickname;
-      dadosPlayer1 = dados[0].respostas_certas;
-      player2 = dados[1].nickname;
-      dadosPlayer2 = dados[1].respostas_certas;
-      player3 = dados[2].nickname;
-      dadosPlayer3 = dados[2].respostas_certas;
-      player4 = dados[3].nickname;
-      dadosPlayer4 = dados[3].respostas_certas;
-      player5 = dados[4].nickname;
-      dadosPlayer5 = dados[4].respostas_certas;
-      player6 = dados[5].nickname;
-      dadosPlayer6 = dados[5].respostas_certas;
-      player7 = dados[6].nickname;
-      dadosPlayer7 = dados[6].respostas_certas;
+    .then(function (json) {
+      player1 = json[0].nickname;
+      dadosPlayer1 = json[0].respostas_certas;
+      player2 = json[1].nickname;
+      dadosPlayer2 = json[1].respostas_certas;
+      player3 = json[2].nickname;
+      dadosPlayer3 = json[2].respostas_certas;
+      player4 = json[3].nickname;
+      dadosPlayer4 = json[3].respostas_certas;
+      player5 = json[4].nickname;
+      dadosPlayer5 = json[4].respostas_certas;
+      player6 = json[5].nickname;
+      dadosPlayer6 = json[5].respostas_certas;
+      player7 = json[6].nickname;
+      dadosPlayer7 = json[6].respostas_certas;
       criarGraficoDados();
     })
-    .catch(function (
-      // erro
-    ) {
-      // console.log(erro);
-    });
 }
 
 function criarGraficoDados() {
@@ -241,42 +211,28 @@ function pegarFeedback() {
     },
   })
     .then(function (resposta) {
-      // console.log("ESTOU NO THEN DO saveFeedback()!");
-      // console.log(resposta);
-
       if (resposta.ok) {
-        // console.log(resposta);
-
         resposta.json().then((json) => {
-          // console.log(json);
           uma_estrela = Number(json[0].uma_estrelas);
           duas_estrela = Number(json[0].duas_estrelas);
           tres_estrela = Number(json[0].tres_estrelas);
           quatro_estrela = Number(json[0].quatro_estrelas);
           cinco_estrela = Number(json[0].cinco_estrelas);
-          total = uma_estrela + duas_estrela + tres_estrela + quatro_estrela + cinco_estrela;
-          uma_estrela = (uma_estrela / total * 100).toFixed(0);
-          duas_estrela = (duas_estrela / total * 100).toFixed(0);
-          tres_estrela = (tres_estrela / total * 100).toFixed(0);
-          quatro_estrela = (quatro_estrela / total * 100).toFixed(0);
-          cinco_estrela = (cinco_estrela / total * 100).toFixed(0);
+          total =
+            uma_estrela +
+            duas_estrela +
+            tres_estrela +
+            quatro_estrela +
+            cinco_estrela;
+          uma_estrela = ((uma_estrela / total) * 100).toFixed(0);
+          duas_estrela = ((duas_estrela / total) * 100).toFixed(0);
+          tres_estrela = ((tres_estrela / total) * 100).toFixed(0);
+          quatro_estrela = ((quatro_estrela / total) * 100).toFixed(0);
+          cinco_estrela = ((cinco_estrela / total) * 100).toFixed(0);
           criarGraficosFeedback();
         });
-      } else {
-        // console.log("Houve um erro ao cadastrar feedback");
-
-        resposta.text().then((
-          // texto
-        ) => {
-          // console.error(texto);
-        });
-      }
+      } 
     })
-    .catch(function (
-      // erro
-    ) {
-      // console.log(erro);
-    });
 }
 
 function criarGraficosFeedback() {
